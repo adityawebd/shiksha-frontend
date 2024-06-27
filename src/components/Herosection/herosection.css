@@ -1,0 +1,133 @@
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+}
+
+
+.herosection {
+    background: linear-gradient(#00000073, #00000077);
+    /* background-color: navy; */
+    height: 70vh;
+    width: 100% !important;
+    margin-top: -20px;
+    position: relative;
+}
+
+.herosection_wrapper {
+    /* border: 1px solid yellow; */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.herosection_wrapper h2 {
+    /* border: 1px solid red; */
+    width: 40%;
+    color: var(--white-clr);
+    position: relative;
+}
+.herosection_wrapper h2 .fixed_h {
+    position: absolute;
+    left: 0;
+}
+.herosection h1 span {
+    color: var(--torque-clr);
+}
+
+.video_bg {
+    width: 100% !important;
+}
+.video_bg {
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.search_widget {
+    /* border: 1px solid red; */
+    width: 40%;
+    margin-top: 14px;
+    position: relative;
+}
+
+.search_widget input {
+    width: 100%;
+    height: 54px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+.search_widget a {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    /* width: 20%; */
+    background-color: var(--primary-clr);
+    padding: 8px 12px;
+    color: var(--white-clr);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 50%;
+}
+
+
+/* Responsive code */
+@media (max-width: 768px) {
+    .herosection {
+        /* background-color: navy; */
+        height: 50vh;
+    }
+    
+    .herosection_wrapper {
+        /* border: 1px solid yellow; */
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .herosection_wrapper h2 {
+        /* border: 1px solid red; */
+        width: 80%;
+        font-size: 20px;
+    }
+    .herosection_wrapper h2 span:last-child {
+        /* border: 1px solid yellow; */
+        margin-left: 96px !important;
+    }
+    .search_widget {
+        /* border: 1px solid red; */
+        width: 80%;
+    }
+    
+    .search_widget input {
+        width: 100%;
+        height: 44px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 14px;
+        outline: none;
+    }
+    .search_widget input::placeholder{
+        font-size: 14px;
+    }
+    
+    .search_widget a {
+        right: 2px;
+        top: 2px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,198 @@
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+}
+
+
+.collegerecommmendations {
+    background-color: var(--reddish-white);
+}
+.collegerecommendations_wrapper .college_card {
+    /* border: 1px solid blue; */
+    overflow: hidden;
+    transition: transform 500ms ease;
+    border-radius: 4px;
+    height: 250px;
+    position: relative;
+
+    margin-bottom: 20px; /* Added margin for better spacing */
+}
+
+.collegerecommendations_wrapper .college_card:hover,
+.collegerecommendations_wrapper .college_card:focus-within {
+  transform: scale(1.05);
+}
+
+.collegerecommendations_wrapper .college_card img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.college_card_content {
+    height: 100%;
+}
+
+.college_details {
+    /* border: 1px solid red; */
+    padding: 20px;
+    color: var(--reddish-white);
+    margin-top: 70px !important;
+    /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
+
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+
+}
+.college_title {
+    margin-bottom: 30px;
+    position: relative;
+    width: max-content;
+  }
+  
+  .card:hover .college_title::after,
+  .card:focus-within .college_title::after {
+    transform: scaleX(1);
+  }
+  
+  .college_title::after {
+    --padding: 1.5rem;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    background: var(--white-clr);
+    transform-origin: left;
+    transform: scaleX(0); /* Set initial state for transition */
+    transition: transform 500ms ease;
+  }
+
+  .college_details:hover .college_title::after,
+.college_details:focus .college_title::after {
+    transform: scaleX(1); /* Expand line on hover/focus */
+}
+
+
+  @media (hover) {
+    .college_details {
+      transform: translateY(65%);
+      transition: transform 500ms ease;
+    }
+  
+    .college_details > *:not(.college_title) {
+      opacity: 1;
+      transition: opacity 500ms linear;
+    }
+  
+    .collegerecommendations_wrapper .college_card:hover .college_details > *:not(.college_title),
+    .collegerecommendations_wrapper .college_card:focus-within .college_details > *:not(.college_title) {
+      opacity: 1;
+      transition-delay: 0.7s;
+    }
+  
+    .collegerecommendations_wrapper .college_card:hover .college_details,
+    .collegerecommendations_wrapper .college_card:focus-within .college_details {
+      transform: translateY(10%);
+      transition-delay: 0.5s;
+    }
+  
+    .collegerecommendations_wrapper .college_card:focus-within .college_details {
+      transition-duration: 0ms;
+    }
+  
+    .college_title::after {
+      transform: scaleX(0);
+    }
+  }
+
+  .college_details {
+    color: rgb(255, 255, 255/0.85);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition-delay: 0ms !important;
+    }
+  }
+
+
+  @media (max-width: 375px) {
+    .college_details {
+        /* border: 1px solid red; */
+        padding: 20px;
+        color: var(--reddish-white);
+        margin-top: 100px !important;
+        /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
+    
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+    
+    }
+}
+
+@media (min-width:376px) and (max-width: 480px) {
+    .college_details {
+        /* border: 1px solid red; */
+        padding: 20px;
+        color: var(--reddish-white);
+        margin-top: 100px !important;
+        /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
+    
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+    
+    }
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    .college_details {
+        /* border: 1px solid red; */
+        padding: 20px;
+        color: var(--reddish-white);
+        margin-top: 100px !important;
+        /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
+    
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+    
+    }
+}
+
+@media (min-width:769px) and (max-width: 1280px) {
+    .college_details {
+        /* border: 1px solid red; */
+        padding: 20px;
+        color: var(--reddish-white);
+        margin-top: 100px !important;
+        /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
+    
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+    
+    }
+}
+
+@media (min-width:1281px) and (max-width: 1500px) {
+    .college_details {
+        /* border: 1px solid red; */
+        padding: 20px;
+        color: var(--reddish-white);
+        margin-top: 100px !important;
+        /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
+    
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+    
+    }
+}

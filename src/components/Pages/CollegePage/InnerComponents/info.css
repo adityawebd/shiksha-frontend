@@ -1,0 +1,187 @@
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+    --black_clr:#000000;
+    --star-clr: #FFA100;
+}
+
+
+.info_section {
+    color: var(--black_clr);
+}
+
+/* ------ quick_updates ------- */
+.quick_updates {
+    padding: 20px 60px 20px 30px;
+    border-radius: 10px;
+    background-color: var(--white-clr);
+}
+
+.quick_updates p {
+    color: var(--dark-gray);
+}
+
+.quick_updates button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--primary-clr);
+    font-weight: 600;
+}
+.quick_updates ul li {
+    color: var(--dark-gray);
+    margin-left: 50px;
+}
+
+/* ----- notification_div------- */
+.notification_div {
+    border-top: 1px dashed var(--light-gray);
+    margin-top: 20px;
+}
+
+.notification_div .notification_header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.notification_div .notification_header span {
+    color: var(--star-clr);
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.notification_div .notification_header p {
+    color: var(--black_clr);
+    font-weight: 600;
+    font-size: 18px;
+    padding-top: 10px;
+}
+.notification_div ul {
+    margin-left: -80px;
+}
+.notification_div ul li {
+    list-style: none;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+.notification_div ul li a {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+.notification_div ul li a:hover {
+    text-decoration: underline;
+}
+.notification_div ul li span {
+    list-style: none;
+    color: green;
+    font-weight: 500;
+}
+
+
+/* ----- about_college --------- */
+.about_college {
+    padding: 20px 60px 20px 30px;
+    border-radius: 10px;
+    background-color: var(--white-clr);
+    margin-top: 20px;
+}
+.about_college small {
+    display: flex;
+}
+.about_college small img {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.about_college p {
+    color: var(--dark-gray);
+}
+
+/* ---------- highlights -------- */
+.highlights {
+    padding: 20px 60px 20px 30px;
+    border-radius: 10px;
+    background-color: var(--white-clr);
+    margin-top: 20px;
+}
+
+.highlights p {
+    color: var(--dark-gray);
+}
+
+
+@media (max-width: 320px) {
+    /* ------ quick_updates ------- */
+    .quick_updates {
+        padding: 20px;
+    }
+    .quick_updates p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .quick_updates p:nth-child(3) span{
+        /* border: 1px solid red; */
+        margin-right: 0 !important;
+    }
+    .quick_updates p:nth-child(3) button{
+        /* border: 1px solid red; */
+        margin-left: 0 !important;
+    }
+
+    .quick_updates ul li {
+        margin-left: 20px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    /* ----- notification_div------- */
+
+    .notification_div .notification_header p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .notification_div ul {
+        margin-left: -50px;
+    }
+
+    /* ----- about_college --------- */
+    .about_college {
+        padding: 20px;
+    }
+    .about_college small {
+        font-size: 11px;
+    }
+    .about_college small img {
+        width: 16px;
+        height: 16px;
+    }
+    .about_college p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    /* ---------- highlights -------- */
+    .highlights {
+        padding: 20px;
+    }
+    .highlights p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .highlights .table_wrapper {
+        overflow-x: scroll;
+    }
+    .highlights .table_wrapper table tr th {
+        font-size: 12px;
+    }
+    .highlights .table_wrapper table tr td {
+        font-size: 10px;
+    }
+}

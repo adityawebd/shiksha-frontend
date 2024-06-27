@@ -1,0 +1,274 @@
+
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+}
+
+
+.classexam {
+    padding-top: 180px;
+    background: url(../../assets/images/cbseboard_bg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+.classexam_body {
+    background-color: var(--white-clr);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.double_widget .classexam_widget,
+.single_widget .classexam_widget {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.classexam_widget {
+    border: 1px solid #000;
+    width: 160px;
+    display: flex;
+    border-radius: 30px;
+    background-color: var(--white-clr);
+    position: relative;
+}
+.classexam_widget .classexam_widget_icon {
+    background-color: #000;
+    display: flex;
+    justify-content: start;
+    /* border-radius: 50%; */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    border-radius: 30px;
+    height: 36px; /* Add fixed height */
+    overflow: hidden; /* Hide overflowing content */
+    transition: border-radius 0.4s; /* Adjust transition for border-radius */
+}
+.classexam_widget span {
+    background-color: #000;
+    color: var(--white-clr);
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+}
+.classexam_widget p {
+    position: absolute;
+    top: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 50px;
+    font-weight: 700;
+    /* border: 1px solid red; */
+}
+.classexam_widget:hover {
+    cursor: pointer;
+}
+.classexam_widget:hover .classexam_widget_icon {
+    width: 160px;
+    transition: all 1s;
+    border-radius: 30px;
+}
+.classexam_widget:hover p {
+    font-weight: 500;
+    color: var(--white-clr);
+    transition: all 0.4s;
+}
+
+.classexam_widget_icon span:last-child {
+    transition: all 1s;
+    display: none;
+}
+.classexam_widget:hover .classexam_widget_icon span:first-child {
+    transition: all 1s;
+    display: none;
+}
+.classexam_widget:hover .classexam_widget_icon span:last-child {
+    display: block;
+    padding: 0;
+    padding-left: 20px;
+    transition: all 1s;
+}
+
+
+@media (max-width: 378px) {
+    .classexam {
+        padding-top: 700px;
+    }    
+    .classexam_widget {
+        width: 130px;
+    }
+    .classexam_widget .classexam_widget_icon {
+        height: 26px; /* Add fixed height */
+        
+    }
+    .classexam_widget span {
+        display: flex;
+        padding: 4px;
+        font-size: 20px;
+    }
+    .classexam_widget p {
+        /* border: 1px solid red; */
+        font-size: 10px !important;
+    }
+    .classexam_widget:hover .classexam_widget_icon {
+        width: 130px;
+    }
+    .classexam_widget:hover .classexam_widget_icon span:last-child {
+        /* border: 1px solid red; */
+        display: block;
+        padding: 0;
+        padding-left: 20px;
+        transition: all 1s;
+        margin-top: -5px;
+    }
+    
+}
+
+@media (min-width:379px) and (max-width: 480px) {
+    .classexam {
+        padding-top: 700px;
+    }    
+    .classexam_widget {
+        width: 130px;
+    }
+    .classexam_widget .classexam_widget_icon {
+        height: 26px; /* Add fixed height */
+        
+    }
+    .classexam_widget span {
+        display: flex;
+        padding: 4px;
+        font-size: 20px;
+    }
+    .classexam_widget p {
+        /* border: 1px solid red; */
+        font-size: 10px !important;
+    }
+    .classexam_widget:hover .classexam_widget_icon {
+        width: 130px;
+    }
+    .classexam_widget:hover .classexam_widget_icon span:last-child {
+        /* border: 1px solid red; */
+        display: block;
+        padding: 0;
+        padding-left: 20px;
+        transition: all 1s;
+        margin-top: -5px;
+    }
+} 
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .classexam {
+        padding-top: 580px;
+    }
+    .classexam_wrapper .second_div_margin_top {
+        margin-top: 30px;
+    }
+    .classexam_body {
+        /* border: 1px solid green; */
+        padding: 20px;
+    }
+
+    .double_widget .classexam_widget,
+    .single_widget .classexam_widget {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .classexam_widget {
+        border: 1px solid #000;
+        width: 160px;
+        display: flex;
+        border-radius: 30px;
+        background-color: var(--white-clr);
+        position: relative;
+    }
+    .classexam_widget .classexam_widget_icon {
+        background-color: #000;
+        display: flex;
+        justify-content: start;
+        /* border-radius: 50%; */
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+
+        border-radius: 30px;
+        height: 36px; /* Add fixed height */
+        overflow: hidden; /* Hide overflowing content */
+        transition: border-radius 0.4s; /* Adjust transition for border-radius */
+    }
+    .classexam_widget span {
+        background-color: #000;
+        color: var(--white-clr);
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        transition: all 1s;
+    }
+    .classexam_widget p {
+        position: absolute;
+        top: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 50px;
+        font-weight: 700;
+        /* border: 1px solid red; */
+    }
+    .classexam_widget:hover {
+        cursor: pointer;
+    }
+    .classexam_widget:hover .classexam_widget_icon {
+        width: 160px;
+        transition: all 1s;
+        border-radius: 30px;
+    }
+    .classexam_widget:hover p {
+        font-weight: 500;
+        color: var(--white-clr);
+        transition: all 0.4s;
+    }
+
+    .classexam_widget_icon span:last-child {
+        transition: all 1s;
+        display: none;
+    }
+    .classexam_widget:hover .classexam_widget_icon span:first-child {
+        transition: all 1s;
+        display: none;
+    }
+    .classexam_widget:hover .classexam_widget_icon span:last-child {
+        display: block;
+        padding: 0;
+        padding-left: 20px;
+        transition: all 1s;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1280px) {
+
+    .classexam_widget p {
+        /* border: 1px solid red; */
+        font-size: 10px !important;
+        margin-left: 46px;
+        top:10px;
+    }
+
+}
+
+@media (min-width:1281px) and (max-width: 1920px) {
+  
+}

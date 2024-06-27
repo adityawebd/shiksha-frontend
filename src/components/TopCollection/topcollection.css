@@ -1,0 +1,108 @@
+
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+}
+
+
+.topcollection {
+    background: url(../../assets/images/2bg-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.img_wrapper {
+    /* border: 1px solid blue; */
+    position: relative;
+    height: 300px !important;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s;
+}
+.img_wrapper .img_wrapper_bg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    border-radius: 4px;
+    transition: all 1s;
+}
+/* .topcollection_outanimate .swiper-slide:hover {
+    transform: scale(1.2) !important;
+    z-index: 999;
+    transition: all 1s;
+
+} */
+.img_wrapper:hover .img_wrapper_bg {
+    transform: scale(1.2);
+}
+
+.img_wrapper_body {
+    /* border: 1px solid red; */
+    /* display: none; */
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.topcollection_outanimate .img_wrapper_body {
+    /* border: 1px solid red; */
+    left: 0;
+}
+.img_wrapper_body h5 {
+    font-weight: 700;
+    color: var(--white-clr);
+    padding: 0 20px;
+    text-align: center;
+}
+.img_wrapper_body p {
+    color: var(--white-clr);
+    font-weight: 500;
+    margin-left: 10px;
+    padding-top: 16px;
+}
+
+.small_colleges_icon {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.small_colleges_icon img {
+    /* border: 1px solid red; */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+.small_colleges_icon img:first-child {
+    /* border: 1px solid red; */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.small_colleges_icon img:nth-child(2) {
+    /* border: 1px solid red; */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    z-index: 2;
+    margin-left: -10px;
+}
+.small_colleges_icon img:nth-child(3) {
+    /* border: 1px solid red; */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    z-index: 3;
+    margin-left: -10px;
+}
