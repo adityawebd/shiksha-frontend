@@ -27,6 +27,7 @@ import Scholarship from './InnerComponents/Scholarship.jsx'
 import Faculty from './InnerComponents/Faculty.jsx'
 import NewsArticles from './InnerComponents/NewsArticles.jsx'
 import Hostel from './InnerComponents/Hostel.jsx'
+import CollegeCompare from './InnerComponents/CollegeCompare.jsx'
 
 const CollegePage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -177,7 +178,7 @@ const CollegePage = () => {
                             <span></span> Hostel</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="modules-tab" data-toggle="tab" href="#modules" role="tab" aria-controls="modules" aria-selected="false">
+                            <a className="nav-link" id="collegeCompare-tab" data-toggle="tab" href="#collegeCompare" role="tab" aria-controls="collegeCompare" aria-selected="false">
                             <span></span> College Compare</a>
                         </li>
                         <li className="nav-item">
@@ -236,6 +237,9 @@ const CollegePage = () => {
                         </div>
                         <div className="tab-pane fade text-left text-light" id="hostel" role="tabpanel" aria-labelledby="hostel-tab">
                             <Hostel />
+                        </div>
+                        <div className="tab-pane fade text-left text-light" id="collegeCompare" role="tabpanel" aria-labelledby="collegeCompare-tab">
+                            <CollegeCompare />
                         </div>
                     </div>
                     {/* <!--tab content end--> */}

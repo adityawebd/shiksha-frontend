@@ -54,7 +54,7 @@ const Navbar = () => {
     // <nav class={color ? 'navbar navbar-expand-lg navbar_fixed navbar_dark' : 'navbar_fixed navbar_dark'}>
     <nav className={`navbar navbar-expand-lg  ${ scrolled ? 'navbar_fixed navbar_dark' : '' }`}>
         {/* <a className={`navbar-brand ${scrolled ? DarkLOGO : LOGO} `} href="#"> */}
-        <NavLink className={`navbar-brand` }href="#">
+        <NavLink className={`navbar-brand` }    to="/">
             <img src={scrolled ? DarkLOGO : LOGO} alt="logo" />
         </NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

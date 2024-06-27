@@ -1,0 +1,88 @@
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --more-light-gray: #7091e610;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+    --black_clr: #000000;
+    --star-clr: #FFA100;
+    --green-clr: #099250;
+    --red-clr: #D92D20;
+}
+
+.college_compare_section {
+    color: var(--black_clr);
+}
+.college_compare_section_wrapper {
+    width: 70%;
+}
+.college_compare_div {
+    padding: 20px 60px 20px 30px;
+    border-radius: 10px;
+    background-color: var(--white-clr);
+}
+.compare_colleges_card_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.compare_colleges_card {
+    /* border: 1px solid red; */
+    border: 1px solid var(--light-gray);
+    width: 300px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px 20px 0;
+}
+.compare_colleges_card .colored_bg {
+    /* border: 1px solid red; */
+    background-color: #73FFD6;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.compare_colleges_card .compare_colleges_card_content{
+    padding: 0 20px 20px 20px;
+}
+.compare_colleges_card figure {
+    border: 3px solid var(--white-clr);
+    background-color: var(--white-clr);
+    border-radius: 50%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: -40px
+}
+.compare_colleges_card .college_name {
+    font-weight: 600;   
+}
+.compare_colleges_card .rating_div {
+    color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.compare_colleges_card .rating_div span {
+    color: var(--star-clr);
+    padding-bottom: 2px;
+    margin: 0 5px;
+}
+.compare_colleges_card .fee {
+    margin: 10px 0 30px 0;
+}
+.compare_colleges_card .fee span {
+    color: var(--green-clr);
+    font-weight: 500;
+}
+
+.compare_colleges_card figure img {
+}

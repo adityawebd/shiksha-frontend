@@ -24,3 +24,11 @@
     background-color: var(--white-clr);
 }
 
+.hostel_div .header{
+    display: flex;
+    justify-content: space-between;
+}
+.hostel_div .header .fee{
+    color: var(--green-clr);
+    font-weight: 600;
+}
