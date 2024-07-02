@@ -18,6 +18,7 @@ import Testimonials from './components/Testimonials/Testimonials';
 import TopExams from './components/TopExams/TopExams';
 import CollegeRecommendations from './components/CollegeRecommendations/CollegeRecommendations';
 import CollegePage from './components/Pages/CollegePage/CollegePage';
+import Contact from './components/Pages/Contact/Contact';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
       <Testimonials /> */}
       <Routes>
         <Route path='/' element={<HeroSection />} />
+        <Route path='/contact-us' element={<Contact />} />
         <Route path='/collegepage' element={<CollegePage />} />
 
         {/* <Route path='*' element={<Error />} */}

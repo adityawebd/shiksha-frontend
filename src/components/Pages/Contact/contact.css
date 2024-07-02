@@ -1,0 +1,25 @@
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+}
+
+
+.contact_us{
+    /* border: 1px solid red; */
+    /* background: linear-gradient(#00000073, #00000077);
+    background-size: cover;
+    position: relative;
+    height: 50vh; */
+}
+.contact_us .navbar {
+    /* border: 1px solid #000; */
+    margin-top: -1px;
+}
+.contact_us .navbar_fixed  {
+    /* border: 1px solid #000; */
+    margin-top: 20px;
+}

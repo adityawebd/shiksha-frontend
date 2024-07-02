@@ -28,18 +28,19 @@
     background: var(--white-clr) !important;
 }
 .navbar-brand img {
-    width: 250px !important;
+    width: 70px !important;
 }
 
 .navbar ul li {
     margin: 0 20px;
 }
-.navbar ul li a {
+.navbar ul li .nav-link {
     color: var(--white-clr) !important;
-    font-size: 18px;
+    background-color: var(--primary-clr);
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
-    padding: 4px 12px;
+    padding: 4px 20px !important;
     border-radius: 30px;
     border: 2px solid transparent;
     position: relative;
@@ -135,6 +136,88 @@
 .navbar_search_widget input {
     border: 1px solid var(--light-gray) !important;
 }
+
+/* ----------- dropdown styling ------------ */
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    perspective: 1000px;
+    display: none;
+
+    margin-left: -40px;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown_menu--animated {
+    display: block;
+}
+
+.dropdown_menu-6 {
+    animation: growDown .5s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    80% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.dropdown_menu li {
+    display: none;
+    color: var(--primary-clr) !important;
+    background-color: var(--white-clr);
+    padding: 20px 20px;
+    font-size: 16px;
+    opacity: 0;
+    transition: .3s all;
+}
+
+.dropdown_menu li:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown_menu li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown_menu li a {
+    text-decoration: none;
+    color: var(--primary-clr) !important;
+    border: none !important;
+}
+
+.dropdown_menu li:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05, 1.05);
+}
+
+.dropdown_menu li:hover a {
+    color: var(--white-clr) !important;
+}
+
+.dropdown:hover .dropdown_menu li {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
+
 
 
 @media (max-width: 378px) {

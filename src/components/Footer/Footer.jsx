@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import FooterBrand from '../../assets/images/RDG-logo-1.png'
+import FooterBrand from '../../assets/logo.png'
 
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer_wrapper">
             <div className="footer_body">
                 <div className="col-md-2 footer_brand">
-                    <img src={FooterBrand} alt="footer-logo" />
+                    <a href="/"><img src={FooterBrand} alt="footer-logo" /></a>
                     <p>Sed ut perspiciatis undmnis is iste natus error sit amet voluptatem totam rem aperiam.</p>
                 </div>
                 <div className="col-md-2 footer_links">
