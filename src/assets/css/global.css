@@ -16,6 +16,11 @@
     display: none;
 }
 
+.bg_reddish {
+  background-color: var(--reddish-white);
+}
+
+
 /* ------------- two cta button styling starts ---------------- */
 .cta_buttons {
     /* border: 1px solid red; */
@@ -223,4 +228,63 @@
 .privacy_policy a {
   color: var(--secondary-color);
   text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+/* -------------- Error --------------- */
+/* ------------------------------------------------------- */
+.error .navbar {
+  /* border: 1px solid #000; */
+  margin-top: -1px;
+}
+
+.error .navbar_fixed {
+  /* border: 1px solid #000; */
+  margin-top: 20px;
+}
+
+.error .error_wrapper {
+  background-image: url('../images/error_bg.svg');
+  background-color: var(--reddish-white);
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 80vh; 
+}
+.error .error_wrapper h2 {
+  color: #3F3D56;
+  font-size: 84px;
+  padding-bottom: 50px;
+}
+
+@media(max-width: 425px) {
+  .error .error_wrapper {
+    background-position: top center;
+    background-size: contain;
+  
+    height: 30vh; 
+    padding-bottom: 100px;
+  }
+  .error .error_wrapper h2 {
+    color: #3F3D56;
+    font-size: 24px;
+    padding-bottom: 0px;
+  }
 }

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './collegepage.css'
 import Navbar from '../../../Navbar'
 // import Footer from '../../Footer/Footer.jsx'
-
+import { useParams, Link } from 'react-router-dom';
 
 import { NavLink } from 'react-router-dom'
 import collegeLOGO from '../../../assets/images/college_imgs/college_logo.webp'
@@ -31,6 +31,7 @@ import CollegeCompare from './InnerComponents/CollegeCompare.jsx'
 
 const CollegePage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { collegeName } = useParams();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -51,7 +52,7 @@ const CollegePage = () => {
                 <div className="college_about_body_head">
                   <img src={collegeLOGO} alt="college-logo" />
                   <div className="body">
-                    <h4>IIT Kharagpur (IIT-KGP):</h4>
+                    <h4>IIT Kharagpur {collegeName} (IIT-KGP):</h4>
                     <h5>Admission 2024, Courses, Fees, Cutoff, Placements</h5>
                     <div className="body_points">
                       <p>Kharagpur, West Bengal</p>
@@ -130,7 +131,7 @@ const CollegePage = () => {
                             <span></span> Courses & Fees</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="distance-edu-tab" data-toggle="tab" href="#distance-edu" role="tab" aria-controls="distance-edu" aria-selected="false">
+                            <a className="nav-link" id="distance-edu-tab" href={`/collegepage/${collegeName}/distance-education/`}>
                             <span></span> Distance Education</a>
                         </li>
                         <li className="nav-item">
@@ -182,7 +183,7 @@ const CollegePage = () => {
                             <span></span> College Compare</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false">
+                            <a className="nav-link" id="q&a-tab" href={`/collegepage/${collegeName}/qna/`}>
                             <span></span> Q&A</a>
                         </li>
                     </ul>

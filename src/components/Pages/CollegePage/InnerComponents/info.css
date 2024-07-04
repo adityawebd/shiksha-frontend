@@ -12,6 +12,7 @@
 
 .info_section {
     color: var(--black_clr);
+    width: 70%;
 }
 
 /* ------ quick_updates ------- */

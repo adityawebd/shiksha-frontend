@@ -22,6 +22,9 @@ import Contact from './components/Pages/Contact/Contact';
 import About from './components/Pages/About/About';
 import TermsAndConditions from './components/Pages/TermsAndConditions';
 import PrivacyPolicy from './components/Pages/PrivacyPolicy';
+import Qna from './components/Pages/Q&A/Qna';
+import Error from './components/Error/Error';
+import DistanceEducation from './components/Pages/DistannceEducation/DistanceEducation';
 
 const App = () => {
   return (
@@ -40,11 +43,13 @@ const App = () => {
         <Route path='/' element={<HeroSection />} />
         <Route path='/about-us' element={<About />} />
         <Route path='/contact-us' element={<Contact />} />
-        <Route path='/collegepage' element={<CollegePage />} />
+        <Route path='/collegepage/:collegeName' element={<CollegePage />} />
         <Route path='/t&c' element={<TermsAndConditions />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/collegepage/:collegeName/qna' element={<Qna />} />
+        <Route path='/collegepage/:collegeName/distance-education' element={<DistanceEducation />} />
 
-        {/* <Route path='*' element={<Error />} */}
+        <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

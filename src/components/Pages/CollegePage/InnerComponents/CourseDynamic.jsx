@@ -129,13 +129,20 @@ const CourseDynamic = () => {
         setIsVisible(!isVisible);
     };
 
+    const fixedData = [
+        {
+            id: 1,
+            page_title: "IIT Kharagpur Fees & Eligibility",
+        }
+    ]
+
 
     return (
         <div className="courses_section">
             {/* 1st section */}
             <div className="fee_eligibility">
                 <div className="fee_eligibility_wrapper">
-                    <h5>IIT Kharagpur Fees & Eligibility</h5>
+                    <h5> {fixedData[0].page_title} </h5>
                     <div className="table_wrapper">
                         <table className="bordered">          {/* Table styling is in table.css */}
                             <thead>

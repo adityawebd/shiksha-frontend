@@ -16,6 +16,7 @@
 }
 
 .fee_eligibility {
+  width: 70%;
   padding: 20px 60px 20px 30px;
   border-radius: 10px;
   background-color: var(--white-clr);
