@@ -200,3 +200,27 @@
   color: var(--black_clr);
 }
 .name_link_style.disabled_link {color: var(--black_clr);}
+
+
+
+/* ------------------------------------------------------- */
+/* -------------- tesrms and conditions --------------- */
+/* ------------------------------------------------------- */
+.terms_and_conditions {
+  background-color: var(--reddish-white);
+}
+.terms_and_conditions a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------- */
+/* -------------- privacy policy --------------- */
+/* ------------------------------------------------------- */
+.privacy_policy {
+  background-color: var(--reddish-white);
+}
+.privacy_policy a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}

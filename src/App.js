@@ -19,6 +19,9 @@ import TopExams from './components/TopExams/TopExams';
 import CollegeRecommendations from './components/CollegeRecommendations/CollegeRecommendations';
 import CollegePage from './components/Pages/CollegePage/CollegePage';
 import Contact from './components/Pages/Contact/Contact';
+import About from './components/Pages/About/About';
+import TermsAndConditions from './components/Pages/TermsAndConditions';
+import PrivacyPolicy from './components/Pages/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -35,8 +38,11 @@ const App = () => {
       <Testimonials /> */}
       <Routes>
         <Route path='/' element={<HeroSection />} />
+        <Route path='/about-us' element={<About />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='/collegepage' element={<CollegePage />} />
+        <Route path='/t&c' element={<TermsAndConditions />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
 
         {/* <Route path='*' element={<Error />} */}
       </Routes>

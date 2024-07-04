@@ -29,6 +29,7 @@
 }
 .navbar-brand img {
     width: 70px !important;
+    border-radius: 50%;
 }
 
 .navbar ul li {
@@ -242,10 +243,6 @@
     .navbar_dark {
         background: var(--white-clr) !important;
     }
-    .navbar-brand img {
-        /* border: 1px solid red; */
-        width: 250px !important;
-    }
     
     .navbar ul li {
         margin: 0 20px;
@@ -449,10 +446,6 @@
     .navbar_dark {
         background: var(--white-clr) !important;
     }
-    .navbar-brand img {
-        width: 250px !important;
-    }
-    
     .contact_button {
         display: none;
     }

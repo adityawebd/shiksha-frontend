@@ -72,7 +72,7 @@ const Navbar = () => {
                                         style={{ color: activeItem === 'item2' ? '#fff' : '', background: activeItem === 'item2' ? '#3D52A0' : '' }}>Services</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" to="#" onClick={() => handleItemClick('item3')}
+                                    <NavLink className="nav-link" to="/about-us" onClick={() => handleItemClick('item3')}
                                         style={{ color: activeItem === 'item3' ? '#fff' : '', background: activeItem === 'item3' ? '#3D52A0' : '' }}>About</NavLink>
                                 </li>
                                 <li className="nav-item">

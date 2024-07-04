@@ -1,0 +1,305 @@
+:root {
+    --primary-clr: #3D52A0;
+    --secondary-color: #7091E6;
+    --dark-gray: #8697c4;
+    --light-gray: #adbbda;
+    --more-light-gray: #7091e610;
+    --reddish-white: #ede8f5;
+    --white-clr: #ffffff;
+    --black_clr: #000000;
+    --star-clr: #FFA100;
+    --green-clr: #099250;
+    --red-clr: #D92D20;
+}
+
+.bg_reddish {
+    background-color: var(--reddish-white);
+}
+
+
+.about_us .navbar {
+    /* border: 1px solid #000; */
+    margin-top: -1px;
+}
+
+.about_us .navbar_fixed {
+    /* border: 1px solid #000; */
+    margin-top: 20px;
+}
+
+.hero_about_us {
+    background-image: linear-gradient(180deg, rgba(150, 105, 97, 0.67) 0%, rgba(2, 0, 76, 0.84) 100%), url(https://www.elegantthemes.com/layouts/wp-content/uploads/2018/04/architect-firm-03.jpg) !important;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-clr);
+}
+
+.mission_vision {
+    display: flex;
+}
+
+.mission_vision .m_s_div {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission_vision .m_s_div {
+    width: 30%;
+    background-color: var(--secondary-color);
+    color: var(--white-clr);
+    padding: 30px 100px;
+}
+
+.mission_vision .m_s_div:first-child {
+    border-radius: 0 300px 300px 0;
+}
+
+.mission_vision .m_s_div:last-child {
+    border-radius: 300px 0 0 300px;
+}
+
+.mission_vision .m_s_div figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission_vision .m_s_div figure img {
+    width: 40%;
+}
+
+.mission_vision .shiksha-helpline {
+    /* border: 1px solid red; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mission_vision .shiksha-helpline h2 {
+    color: var(--star-clr);
+    font-size: 50px;
+}
+
+.mission_vision .shiksha-helpline p {
+    /* background-color: var(--white-clr); */
+    width: 80%;
+}
+
+.about_for {
+    /* border: 1px solid red; */
+}
+
+.aobut_for_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_for img {
+    width: 40%;
+    height: 100px;
+}
+
+.aobut_for_wrapper .about_for_card {
+    border-radius: 10px 10px 0 0;
+}
+
+.about_long_way {
+    background-color: var(--white-clr);
+}
+
+.about_long_way .about_long_way_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_long_way .long_way_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 50px;
+}
+
+.about_long_way_wrapper .long_way_card img {
+    border: 1px solid var(--dark-gray);
+    width: 100px;
+    height: 100px;
+}
+
+.about_long_way_wrapper .long_way_card .no_of_colleges {
+    font-weight: 600;
+}
+
+.about_long_way_wrapper .long_way_card .title {
+    font-size: 13px;
+}
+
+.team_img {
+    background-image: linear-gradient(180deg, rgba(83, 81, 80, 0.67) 0%, rgba(2, 0, 76, 0.84) 100%), url('../../../assets/images/about/group-people-working-out-business-plan-office.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white-clr);
+}
+
+.about_advertise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about_advertise a {
+    text-decoration: none;
+    background-color: var(--star-clr);
+    padding: 10px 50px;
+    color: var(--white-clr);
+}
+
+
+
+@media (max-width: 425px) {
+    .mission_vision {
+        flex-direction: column;
+    }
+
+    .mission_vision .m_s_div {
+        /* border: 1px solid red; */
+        flex-direction: column;
+    }
+
+    .mission_vision .m_s_div {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .mission_vision .m_s_div:first-child {
+        border-radius: 20px;
+    }
+
+    .mission_vision .m_s_div:last-child {
+        border-radius: 20px;
+    }
+
+    .mission_vision .shiksha-helpline {
+        /* border: 1px solid red; */
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .mission_vision .shiksha-helpline h2 {
+        font-size: 36px;
+    }
+
+    .mission_vision .shiksha-helpline p {
+        /* background-color: var(--white-clr); */
+        width: 80%;
+    }
+
+
+
+    .aobut_for_wrapper {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .about_for img {
+        width: 100%;
+    }
+    .aobut_for_wrapper .about_for_card {
+        border-radius: 10px;
+    }
+    .about_long_way .about_long_way_wrapper {
+        flex-direction: column;
+    }
+    .about_long_way .long_way_card {
+        margin-bottom: 20px;
+    }
+    .team_img {
+        height: 30vh;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .mission_vision {
+        flex-direction: column;
+        padding: 0 50px;
+    }
+
+    .mission_vision .m_s_div {
+        /* border: 1px solid red; */
+        flex-direction: column;
+    }
+
+    .mission_vision .m_s_div {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .mission_vision .m_s_div:first-child {
+        border-radius: 20px;
+    }
+
+    .mission_vision .m_s_div:last-child {
+        border-radius: 20px;
+    }
+
+    .mission_vision .shiksha-helpline {
+        /* border: 1px solid red; */
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .mission_vision .shiksha-helpline h2 {
+        font-size: 36px;
+    }
+
+    .mission_vision .shiksha-helpline p {
+        /* background-color: var(--white-clr); */
+        width: 80%;
+    }
+
+    
+
+
+    .aobut_for_wrapper {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .about_for img {
+        width: 100%;
+    }
+    .aobut_for_wrapper .about_for_card {
+        border-radius: 10px;
+    }
+    .about_long_way .about_long_way_wrapper {
+        flex-direction: row;
+    }
+    .about_long_way .long_way_card {
+        margin-bottom: 20px;
+    }
+    .team_img {
+        height: 30vh;
+        text-align: center;
+    }
+}
