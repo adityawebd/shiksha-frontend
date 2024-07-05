@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './admission.css';
 import { FaSearch } from "react-icons/fa";
 import DecisionICON from '../../../../assets/images/decision.png'
+import axios from 'axios';
 
 const AdmissionDynamic = () => {
 
@@ -9,425 +10,448 @@ const AdmissionDynamic = () => {
 
     const [filter, setFilter] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
-
     const [datas, setData] = useState([])
 
-    const items = [
-        {
-            id: 1,
-            name: 'B.tech',
-            className: 'be_btech',         // This classname will be changed according to the button class and filterSelection in all the array
-            h5_1: 'Important Events',
+    
 
-            importantEventsTableData: [
-                {
-                    event_name: 'Declaration of Second Admission List [IIT JAM]',
-                    event_tag: 'Upcoming',
-                    event_date: 'Jun 12, 2024'
-                },
-                {
-                    event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
-                    event_tag: 'Tentaive',
-                    event_date: 'Jun 18, 2024'
-                },
-                {
-                    event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
-                    event_tag: 'Ongoing',
-                    event_date: 'Jun 18, 2024'
-                },
-            ],
+    // const items = [
+    //     {
+    //         id: 1,
+    //         name: 'B.tech',
+    //         className: 'be_btech',         // This classname will be changed according to the button class and filterSelection in all the array
+    //         h5_1: 'Important Events',
 
-            h5_2: 'Expired Events',
-            expiredEventsTableData: [
-                {
-                    event_name: 'CAT 2023 Result Date',
-                    event_date: 'Dec 21, 2023'
-                },
-                {
-                    event_name: 'JEE-Advanced counselling',
-                    event_date: 'Jan 10, 2024'
-                },
-                {
-                    event_name: 'CAT 2023 Exam Date',
-                    event_date: 'Nov 26, 2023'
-                },
-            ],
+    //         importantEventsTableData: [
+    //             {
+    //                 event_name: 'Declaration of Second Admission List [IIT JAM]',
+    //                 event_tag: 'Upcoming',
+    //                 event_date: 'Jun 12, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
+    //                 event_tag: 'Tentaive',
+    //                 event_date: 'Jun 18, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
+    //                 event_tag: 'Ongoing',
+    //                 event_date: 'Jun 18, 2024'
+    //             },
+    //         ],
+
+    //         h5_2: 'Expired Events',
+    //         expiredEventsTableData: [
+    //             {
+    //                 event_name: 'CAT 2023 Result Date',
+    //                 event_date: 'Dec 21, 2023'
+    //             },
+    //             {
+    //                 event_name: 'JEE-Advanced counselling',
+    //                 event_date: 'Jan 10, 2024'
+    //             },
+    //             {
+    //                 event_name: 'CAT 2023 Exam Date',
+    //                 event_date: 'Nov 26, 2023'
+    //             },
+    //         ],
 
 
-            cutOffData: [
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "124",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-            ],
+    //         cutOffData: [
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "124",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //         ],
 
-        },
+    //     },
 
-        {
-            id: 2,
-            name: 'M.tech',
-            // This classname will be changed according to the button class and filterSelection in all the array
-            className: 'msc', // This classname will be changed according to the button class and filterSelection in all the array
-            h5_1: 'Important Events',
-            importantEventsTableData: [
-                {
-                    event_name: 'Declaration of Second Admission List [IIT JAM]',
-                    event_tag: 'Upcoming',
-                    event_date: 'Jun 01, 2024'
-                },
-                {
-                    event_name: 'Last Date for Online Payment of Seat Booking Fee for Second Admission List [IIT JAM]',
-                    event_tag: 'Ongoing',
-                    event_date: 'Jun 25, 2024'
-                },
-            ],
-            h5_2: 'Expired Events',
-            expiredEventsTableData: [
-                {
-                    event_name: 'Last Date for Online Payment of Seat Booking Fee for First Admission List [IIT JAM]',
-                    event_date: 'Jun 04, 2024'
-                },
-                {
-                    event_name: 'Declaration of First Admission List [IIT JAM]',
-                    event_date: 'May 31, 2024'
-                },
-                {
-                    event_name: 'IIT-JAM counselling',
-                    event_date: 'Apr 10, 2024 - Apr 29, 2024'
-                },
-            ],
-            cutOffData: [
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-            ],
 
-        },
 
-        {
-            id: 3,
-            name: 'M.tech',
-            className: 'me_mtech', // This classname will be changed according to the button class and filterSelection in all the array
-            h5_1: 'Important Events',
-            importantEventsTableData: [
-                {
-                    event_name: 'Declaration of Second Admission List [IIT JAM]',
-                    event_tag: 'Upcoming',
-                    event_date: 'Jun 12, 2024'
-                },
-                {
-                    event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
-                    event_tag: 'Ongoing',
-                    event_date: 'Jun 18, 2024'
-                },
-            ],
-            h5_2: 'Expired Events',
-            expiredEventsTableData: [
-                {
-                    event_name: 'CAT 2023 Result Date',
-                    event_date: 'Dec 21, 2023'
-                },
-                {
-                    event_name: 'JEE-Advanced counselling',
-                    event_date: 'Jan 10, 2024'
-                },
-                {
-                    event_name: 'CAT 2023 Exam Date',
-                    event_date: 'Nov 26, 2023'
-                },
-            ],
-            cutOffData: [
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "124",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-            ],
 
-        },
 
-        {
-            id: 4,
-            name: 'MA',
-            className: 'ma',  // This classname will be changed according to the button class and filterSelection in all the array
-            h5_1: 'Important Events',
-            importantEventsTableData: [
-                {
-                    event_name: 'Declaration of Second Admission List [IIT JAM]',
-                    event_tag: 'Upcoming',
-                    event_date: 'Jun 01, 2024'
-                },
-                {
-                    event_name: 'Last Date for Online Payment of Seat Booking Fee for Second Admission List [IIT JAM]',
-                    event_tag: 'Ongoing',
-                    event_date: 'Jun 25, 2024'
-                },
-            ],
-            h5_2: 'Expired Events',
-            expiredEventsTableData: [
-                {
-                    event_name: 'Last Date for Online Payment of Seat Booking Fee for First Admission List [IIT JAM]',
-                    event_date: 'Jun 04, 2024'
-                },
-                {
-                    event_name: 'Declaration of First Admission List [IIT JAM]',
-                    event_date: 'May 31, 2024'
-                },
-                {
-                    event_name: 'IIT-JAM counselling',
-                    event_date: 'Apr 10, 2024 - Apr 29, 2024'
-                },
-            ],
-            cutOffData: [
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-            ],
 
-        },
 
-        {
-            id: 5,
-            name: 'M.Phill in Arts',
-            className: 'mphil_arts',  // This classname will be changed according to the button class and filterSelection in all the array
-            h5_1: 'Important Events',
-            importantEventsTableData: [
-                {
-                    event_name: 'Declaration of Second Admission List [IIT JAM]',
-                    event_tag: 'Upcoming',
-                    event_date: 'Jun 12, 2024'
-                },
-                {
-                    event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
-                    event_tag: 'Ongoing',
-                    event_date: 'Jun 18, 2024'
-                },
-            ],
-            h5_2: 'Expired Events',
-            expiredEventsTableData: [
-                {
-                    event_name: 'CAT 2023 Result Date',
-                    event_date: 'Dec 21, 2023'
-                },
-                {
-                    event_name: 'JEE-Advanced counselling',
-                    event_date: 'Jan 10, 2024'
-                },
-                {
-                    event_name: 'CAT 2023 Exam Date',
-                    event_date: 'Nov 26, 2023'
-                },
-            ],
-            cutOffData: [
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-                {
-                    title: "IIT Madras, JEE Advanced Cutoff 2023",
-                    para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
-                    cutOffDataTable: [
-                        {
-                            courses: "B.Tech Computer Science Engineering",
-                            cutoff_2023: "144",
-                            cutoff_2022: "167",
-                            cutoff_2021: "163",
-                            cutoff_2020: "157",
-                        },
-                        {
-                            courses: "B.Tech Electrical Engineering",
-                            cutoff_2023: "908",
-                            cutoff_2022: "985",
-                            cutoff_2021: "1007",
-                            cutoff_2020: "818",
-                        }
-                    ],
-                    exam_name: "JEE Advanced",
-                    year: "2023"
-                },
-            ],
 
-        },
-    ];
+
+
+
+
+
+
+
+    //     {
+    //         id: 2,
+    //         name: 'M.tech',
+    //         // This classname will be changed according to the button class and filterSelection in all the array
+    //         className: 'msc', // This classname will be changed according to the button class and filterSelection in all the array
+    //         h5_1: 'Important Events',
+    //         importantEventsTableData: [
+    //             {
+    //                 event_name: 'Declaration of Second Admission List [IIT JAM]',
+    //                 event_tag: 'Upcoming',
+    //                 event_date: 'Jun 01, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Last Date for Online Payment of Seat Booking Fee for Second Admission List [IIT JAM]',
+    //                 event_tag: 'Ongoing',
+    //                 event_date: 'Jun 25, 2024'
+    //             },
+    //         ],
+    //         h5_2: 'Expired Events',
+    //         expiredEventsTableData: [
+    //             {
+    //                 event_name: 'Last Date for Online Payment of Seat Booking Fee for First Admission List [IIT JAM]',
+    //                 event_date: 'Jun 04, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Declaration of First Admission List [IIT JAM]',
+    //                 event_date: 'May 31, 2024'
+    //             },
+    //             {
+    //                 event_name: 'IIT-JAM counselling',
+    //                 event_date: 'Apr 10, 2024 - Apr 29, 2024'
+    //             },
+    //         ],
+    //         cutOffData: [
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //         ],
+
+    //     },
+
+    //     {
+    //         id: 3,
+    //         name: 'M.tech',
+    //         className: 'me_mtech', // This classname will be changed according to the button class and filterSelection in all the array
+    //         h5_1: 'Important Events',
+    //         importantEventsTableData: [
+    //             {
+    //                 event_name: 'Declaration of Second Admission List [IIT JAM]',
+    //                 event_tag: 'Upcoming',
+    //                 event_date: 'Jun 12, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
+    //                 event_tag: 'Ongoing',
+    //                 event_date: 'Jun 18, 2024'
+    //             },
+    //         ],
+    //         h5_2: 'Expired Events',
+    //         expiredEventsTableData: [
+    //             {
+    //                 event_name: 'CAT 2023 Result Date',
+    //                 event_date: 'Dec 21, 2023'
+    //             },
+    //             {
+    //                 event_name: 'JEE-Advanced counselling',
+    //                 event_date: 'Jan 10, 2024'
+    //             },
+    //             {
+    //                 event_name: 'CAT 2023 Exam Date',
+    //                 event_date: 'Nov 26, 2023'
+    //             },
+    //         ],
+    //         cutOffData: [
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "124",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //         ],
+
+    //     },
+
+    //     {
+    //         id: 4,
+    //         name: 'MA',
+    //         className: 'ma',  // This classname will be changed according to the button class and filterSelection in all the array
+    //         h5_1: 'Important Events',
+    //         importantEventsTableData: [
+    //             {
+    //                 event_name: 'Declaration of Second Admission List [IIT JAM]',
+    //                 event_tag: 'Upcoming',
+    //                 event_date: 'Jun 01, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Last Date for Online Payment of Seat Booking Fee for Second Admission List [IIT JAM]',
+    //                 event_tag: 'Ongoing',
+    //                 event_date: 'Jun 25, 2024'
+    //             },
+    //         ],
+    //         h5_2: 'Expired Events',
+    //         expiredEventsTableData: [
+    //             {
+    //                 event_name: 'Last Date for Online Payment of Seat Booking Fee for First Admission List [IIT JAM]',
+    //                 event_date: 'Jun 04, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Declaration of First Admission List [IIT JAM]',
+    //                 event_date: 'May 31, 2024'
+    //             },
+    //             {
+    //                 event_name: 'IIT-JAM counselling',
+    //                 event_date: 'Apr 10, 2024 - Apr 29, 2024'
+    //             },
+    //         ],
+    //         cutOffData: [
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //         ],
+
+    //     },
+
+    //     {
+    //         id: 5,
+    //         name: 'M.Phill in Arts',
+    //         className: 'mphil_arts',  // This classname will be changed according to the button class and filterSelection in all the array
+    //         h5_1: 'Important Events',
+    //         importantEventsTableData: [
+    //             {
+    //                 event_name: 'Declaration of Second Admission List [IIT JAM]',
+    //                 event_tag: 'Upcoming',
+    //                 event_date: 'Jun 12, 2024'
+    //             },
+    //             {
+    //                 event_name: 'Display of Mock Seat Allocation 1 [JoSAA Counselling] [B.Tech]',
+    //                 event_tag: 'Ongoing',
+    //                 event_date: 'Jun 18, 2024'
+    //             },
+    //         ],
+    //         h5_2: 'Expired Events',
+    //         expiredEventsTableData: [
+    //             {
+    //                 event_name: 'CAT 2023 Result Date',
+    //                 event_date: 'Dec 21, 2023'
+    //             },
+    //             {
+    //                 event_name: 'JEE-Advanced counselling',
+    //                 event_date: 'Jan 10, 2024'
+    //             },
+    //             {
+    //                 event_name: 'CAT 2023 Exam Date',
+    //                 event_date: 'Nov 26, 2023'
+    //             },
+    //         ],
+    //         cutOffData: [
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //             {
+    //                 title: "IIT Madras, JEE Advanced Cutoff 2023",
+    //                 para: "IIT Madras, JEE Advanced Cutoff 2023 for General Category is listed below. The overall cutoff rank for JEE Advanced is 144 - 10060 for round 1.",
+    //                 cutOffDataTable: [
+    //                     {
+    //                         courses: "B.Tech Computer Science Engineering",
+    //                         cutoff_2023: "144",
+    //                         cutoff_2022: "167",
+    //                         cutoff_2021: "163",
+    //                         cutoff_2020: "157",
+    //                     },
+    //                     {
+    //                         courses: "B.Tech Electrical Engineering",
+    //                         cutoff_2023: "908",
+    //                         cutoff_2022: "985",
+    //                         cutoff_2021: "1007",
+    //                         cutoff_2020: "818",
+    //                     }
+    //                 ],
+    //                 exam_name: "JEE Advanced",
+    //                 year: "2023"
+    //             },
+    //         ],
+
+    //     },
+
+    // ];
+
+
+
+
+
+
+
 
     const filterSelection = (filter) => {
         setFilter(filter);
@@ -437,11 +461,13 @@ const AdmissionDynamic = () => {
         setSearchQuery(e.target.value.toUpperCase());
     };
 
+
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // const response = await axios.get(`/api/productDetail?condition=${urldata}`)
-                setData(items)
+                const response = await axios.get(`http://localhost:5000/api/admissions`)
+                setData(response.data)
 
             }
             catch (error) {
@@ -449,6 +475,7 @@ const AdmissionDynamic = () => {
             }
         }
         fetchData()
+
     }, []);
 
     console.log("data is ", datas)
@@ -469,7 +496,7 @@ const AdmissionDynamic = () => {
                             All
                         </button>
 
-                        {items.map(info => (
+                        {datas.map(info => (
                             <button
                                 key={info.id}
                                 className={`btn ${filter === info.className ? 'active' : ''}`}
@@ -478,10 +505,16 @@ const AdmissionDynamic = () => {
                                 {info.name}
                             </button>
                         ))}
+
+
                     </div>
 
+
+
+
+
                     <div className="filterContentWrapper">
-                        {items.map(item => (
+                        {datas.map(item => (
                             <div
                                 key={item.id}
                                 className={`filterDiv ${item.className.split(' ').some(c => filter === 'all' || filter === c) ? 'show' : ''}`}
@@ -585,10 +618,10 @@ const AdmissionDynamic = () => {
                                                                                                     <img src={DecisionICON} alt="" />
                                                                                                 </div>
                                                                                             </td>
-                                                                                            <td>{row.cutoff_2023}</td>
-                                                                                            <td>{row.cutoff_2022}</td>
-                                                                                            <td>{row.cutoff_2021}</td>
-                                                                                            <td>{row.cutoff_2020}</td>
+                                                                                            <td>{row.cutoff_year1}</td>
+                                                                                            <td>{row.cutoff_year2}</td>
+                                                                                            <td>{row.cutoff_year3}</td>
+                                                                                            <td>{row.cutoff_year4}</td>
                                                                                         </tr>
                                                                                     ))}
                                                                                 </tbody>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect,useState} from 'react'
 import "./reviews.css"
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
@@ -16,6 +16,7 @@ import { BiSolidDislike } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { FaStarHalfAlt } from "react-icons/fa";
+import axios from 'axios';
 
 
 
@@ -23,6 +24,7 @@ const ReviewsDynamic = () => {
     // State to manage visibility for each section
     const [visibleLikes, setVisibleLikes] = useState({});
     const [visibleDislikes, setVisibleDislikes] = useState({});
+    const [reviewsData, setReviewsData] = useState([]);
 
     const fixedData = [
         {
@@ -37,6 +39,21 @@ const ReviewsDynamic = () => {
             placement_review: '4.3',
         }
     ]
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:5000/api/reviews`)
+                setReviewsData(response.data)
+
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+
+    }, []);
 
     // Array of progress values for each star rating
     const progressValues = [
@@ -58,51 +75,70 @@ const ReviewsDynamic = () => {
         setVisibleDislikes(prevState => ({ ...prevState, [index]: !prevState[index] }));
     };
     
-    const reviewsData = [  // Demo data for likes and dislikes
-        {
-            title: "What Students Say?",
-            title_link: "",
-            rating: "3.1",
-            helpful_or_not: "HelpFul",
-            likes: [
-                "The campus placement is best as we can apply for internships whenever we want we get a lot of mails to our college mail",
-                "The best in class faculties and the best environment to study along with like minded people.",
-                "Best part is that it is fully online, therefore we get a lot of time at our home.",
-                "Campus life is at the best, u can make or break u r career here",
-                "The industry interaction talks it offer is one of the best part",
-                "Greenary, flora and fauna of the campus , weather is great here"
-            ],
-            dislikes: [
-                "Lectures give by faculty are bit boring and some are very lengthy too.",
-                "The academics are somewhat tough and during exams, students get sleepless nights.",
-                "Food over is not good for North Indians so they need to find some alternative",
-                "Research atmosphere is very good professor will show hell lot of interest in it",
-                "Competition, which makes you feel like you are not talented sometimes"
-            ]
-        },
-        {
-            title: "What Students Say?",
-            rating: "4.1",
-            helpful_or_not: "Not Helpful",
-            likes: [
-                "The campus placement is best as we can apply for internships whenever we want we get a lot of mails to our college mail",
-                "The best in class faculties and the best environment to study along with like minded people.",
-                "Best part is that it is fully online, therefore we get a lot of time at our home.",
-                "Campus life is at the best, u can make or break u r career here",
-                "The industry interaction talks it offer is one of the best part",
-                "Research atmosphere is very good professor will show hell lot of interest in it",
-                "Greenary, flora and fauna of the campus , weather is great here"
-            ],
-            dislikes: [
-                "Lectures give by faculty are bit boring and some are very lengthy too.",
-                "The academics are somewhat tough and during exams, students get sleepless nights.",
-                "Food over is not good for North Indians so they need to find some alternative",
-                "Research atmosphere is very good professor will show hell lot of interest in it",
-                "Competition, which makes you feel like you are not talented sometimes"
-            ]
-        },
-        // Add more sections if needed
-    ];
+    //  reviewsData = [  // Demo data for likes and dislikes
+    //     {
+    //         title: "What Students Say?",
+    //         title_link: "",
+    //         rating: "3.1",
+    //         helpful_or_not: "HelpFul",
+    //         likes: [
+    //             "The campus placement is best as we can apply for internships whenever we want we get a lot of mails to our college mail",
+    //             "The best in class faculties and the best environment to study along with like minded people.",
+    //             "Best part is that it is fully online, therefore we get a lot of time at our home.",
+    //             "Campus life is at the best, u can make or break u r career here",
+    //             "The industry interaction talks it offer is one of the best part",
+    //             "Greenary, flora and fauna of the campus , weather is great here"
+    //         ],
+    //         dislikes: [
+    //             "Lectures give by faculty are bit boring and some are very lengthy too.",
+    //             "The academics are somewhat tough and during exams, students get sleepless nights.",
+    //             "Food over is not good for North Indians so they need to find some alternative",
+    //             "Research atmosphere is very good professor will show hell lot of interest in it",
+    //             "Competition, which makes you feel like you are not talented sometimes"
+    //         ]
+    //     },
+    //     {
+    //         title: "What Students Say?",
+    //         title_link: "",
+    //         rating: "4.1",
+    //         helpful_or_not: "Not Helpful",
+    //         likes: [
+    //             "The campus placement is best as we can apply for internships whenever we want we get a lot of mails to our college mail",
+    //             "The best in class faculties and the best environment to study along with like minded people.",
+    //             "Best part is that it is fully online, therefore we get a lot of time at our home.",
+    //             "Campus life is at the best, u can make or break u r career here",
+    //             "The industry interaction talks it offer is one of the best part",
+    //             "Research atmosphere is very good professor will show hell lot of interest in it",
+    //             "Greenary, flora and fauna of the campus , weather is great here"
+    //         ],
+    //         dislikes: [
+    //             "Lectures give by faculty are bit boring and some are very lengthy too.",
+    //             "The academics are somewhat tough and during exams, students get sleepless nights.",
+    //             "Food over is not good for North Indians so they need to find some alternative",
+    //             "Research atmosphere is very good professor will show hell lot of interest in it",
+    //             "Competition, which makes you feel like you are not talented sometimes"
+    //         ]
+    //     },
+    //     // Add more sections if needed
+    // ];
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:5000/api/reviews`)
+                setReviewsData(response.data)
+
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+
+    }, []);
+
+    console.log("rewiew is",reviewsData)
 
     return (
         <div className="reviews_section">
@@ -110,13 +146,13 @@ const ReviewsDynamic = () => {
 
                 {/* 1st section */}
                 <div className="overall_reviews">
-                    <h5 className='mb-3'>Why To Join IIT Kharagpur - Reviews & Rating</h5>
+                    <h5 className='mb-3'>{fixedData[0].page_title}</h5>
                     <div className="overall_reviews_wrapper">
                         <div className="section1">
                             <div className="overall_reviews_wrapper_1">
                                 <div className="rating_div">
                                     <div className="rating">
-                                        <div className="number">4.2</div>
+                                        <div className="number">{fixedData[0].number}</div>
                                         <div className="stars">
                                             <span><FaStar /></span>
                                             <span><FaStar /></span>
@@ -127,10 +163,10 @@ const ReviewsDynamic = () => {
                                     </div>
                                     <p>
                                         <img src={SecureIMG} alt="" />
-                                        <span>&nbsp; (352 Verified Reviews)</span>
+                                        <span>&nbsp; ({fixedData[0].verified_reviews} Verified Reviews)</span>
                                     </p>
                                     <a href="">Write a College Review <IoIosArrowForward /> </a> {/* Review Page Link */}
-                                    <p><small>& Win Monthly Prizes Up to ₹1 Lakh/-*</small></p>
+                                    <p><small>& Win Monthly Prizes Up to â‚¹1 Lakh/-*</small></p>
                                 </div>
                             </div>
                             <div className="overall_reviews_wrapper_2 progress_bars_div">              {/* Styling globals.css */}
