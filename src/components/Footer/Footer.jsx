@@ -34,19 +34,19 @@ const Footer = () => {
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Top Universities</h6>
                                 <ul>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
+                                    <li><a href="">University 1</a></li>
+                                    <li><a href="">University 2</a></li>
+                                    <li><a href="">University 3</a></li>
+                                    <li><a href="">University 4</a></li>
                                 </ul>
                             </div>
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Top Colleges</h6>
                                 <ul>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
+                                    <li><a href="">College 1</a></li>
+                                    <li><a href="">College 2</a></li>
+                                    <li><a href="">College 3</a></li>
+                                    <li><a href="">College 4</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -54,21 +54,21 @@ const Footer = () => {
                     <div className="col-md-4">
                         <div className="row">
                             <div className="col-md-6 col-sm-6 col-6">
-                                <h6>Top Universities</h6>
+                                <h6>Top Exams</h6>
                                 <ul>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
+                                    <li><a href="">Exam 1</a></li>
+                                    <li><a href="">Exam 2</a></li>
+                                    <li><a href="">Exam 3</a></li>
+                                    <li><a href="">Exam 4</a></li>
                                 </ul>
                             </div>
                             <div className="col-md-6 col-sm-6 col-6">
-                                <h6>Top Colleges</h6>
+                                <h6>Top Study Abroad Places</h6>
                                 <ul>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
-                                    <li><a href="">Saas Company</a></li>
+                                    <li><a href="">Place 1</a></li>
+                                    <li><a href="">Place 2</a></li>
+                                    <li><a href="">Place 3</a></li>
+                                    <li><a href="">Place 4</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ const Footer = () => {
                         <span><a href=""><FaInstagram /></a></span>
                         <span><a href=""><FaTwitter /></a></span>
                     </div>
-                    <div className="copyright">&copy; 2024 TailGrids</div>
+                    <div className="copyright">&copy; 2024 Siksha Helpline</div>
                 </div>
             </div>
         </div>

@@ -34,7 +34,7 @@ const Top10Colleges = () => {
                 
                 <h2 className='mb-4'>Top 10 Colleges</h2>
 
-                <Tabs defaultActiveKey="BCA" id="uncontrolled-tab-example" className="mb-3 tabs">
+                <Tabs defaultActiveKey="BE/B.Tech" id="uncontrolled-tab-example" className="mb-3 tabs">
 
 
                     {tabData.map((info) => (

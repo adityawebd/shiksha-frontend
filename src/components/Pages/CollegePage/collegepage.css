@@ -8,6 +8,16 @@
     --white-clr: #ffffff;
     --star-clr: #FFA100;
 }
+/* body, html {
+    overflow-x: hidden; Prevent body from scrolling horizontally
+} */
+/* .college_page_responsive {
+    width: 1200px; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    border: 1px solid red;
+
+} */
 
 .collegepage_section{
     /* border: 1px solid red; */

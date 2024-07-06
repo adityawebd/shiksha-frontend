@@ -24,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* z-index: 9999 !important; */
 }
 
 .herosection_wrapper h2 {
@@ -31,6 +32,8 @@
     width: 40%;
     color: var(--white-clr);
     position: relative;
+    /* z-index: 9999 !important; */
+    
 }
 .herosection_wrapper h2 .fixed_h {
     position: absolute;
@@ -55,6 +58,7 @@
     /* border: 1px solid red; */
     width: 40%;
     margin-top: 14px;
+    z-index: 10 !important;
     position: relative;
 }
 

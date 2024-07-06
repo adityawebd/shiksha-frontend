@@ -152,10 +152,9 @@ const Contact = () => {
                                     <div className="items">
                                         <span> <FaLocationDot />  </span>
                                         <p>
-
-                                            AHIKSHA HELPLINE
-                                            XTH Floor,  Xyz Tower, XYZ Place
-                                            New Delhi, Delhi, 110058
+                                            <a href="#map">Unit-02 Greencity Apartment Chandmari
+                                            Near MS College Motihari, East Champaran,
+                                            Bihar, 845401</a>
                                         </p>
                                     </div>
                                     <div className="items">
@@ -168,7 +167,7 @@ const Contact = () => {
                                     <div className="items">
                                         <span> <IoIosMail /> </span>
                                         <p>
-                                            <a href="">contact@shiksha-helpline.com</a>
+                                            <a href="">contact@sikshahelpline.com</a>
                                         </p>
                                     </div>
                                 </div>
@@ -176,8 +175,8 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="map_integration">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13999.748683318805!2d77.1513475!3d28.691526!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0302948a64a9%3A0xb00c6662e07ddf21!2sRapid%20Digital%20Growth%20-%20Best%20Digital%20Marketing%20Agency%20in%20Delhi!5e0!3m2!1sen!2sin!4v1719922569450!5m2!1sen!2sin"
+                    <div className="map_integration" id='map'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.745170448307!2d84.89910807543062!3d26.656640376800702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399334fe4f532959%3A0x458a73d1414465df!2sGreen%20City%20Apartment!5e0!3m2!1sen!2sin!4v1720241751952!5m2!1sen!2sin"
                             width="600"
                             height="450"
                             // style="border:0;"
