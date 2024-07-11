@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './department.css'
 import { NavLink } from 'react-bootstrap';
-
+import { useParams, Link } from 'react-router-dom';
 import { HiOutlineDownload } from "react-icons/hi";
 import { IoIosArrowDropright } from "react-icons/io";
 import { BiSolidLike } from "react-icons/bi";
@@ -9,6 +9,7 @@ import { BiSolidDislike } from "react-icons/bi";
 import { MdOutlineShare } from "react-icons/md";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import axios from 'axios';
 
 import DepartmentIMG from '../../../../assets/images/department.webp'  // image import 
 
@@ -16,6 +17,9 @@ const DepartmentDynamic = () => {
 
     // Using an object to keep track of the expansion state of each card
     const [expandedCards, setExpandedCards] = useState({});
+    const { collegeName } = useParams();
+    const [count, setCount] = useState(0)
+    const [department, stDepartment]=useState([])
 
     // Toggle the expansion state for a specific card
     const toggleReadMore = (id) => {
@@ -25,31 +29,50 @@ const DepartmentDynamic = () => {
         }));
     };
 
-    const fixedData = [
-        {
-            id: 1,
-            page_title: "IIT Kharagpur, Deparments",
-            answered_ques_title: "IIT Kharagpur: 309 Answered Questions",
-            view_all_link: "",
+    // const fixedData = [
+    //     {
+    //         id: 1,
+    //         page_title: "IIT Kharagpur, Deparments",
+    //         answered_ques_title: "IIT Kharagpur: 309 Answered Questions",
+    //         view_all_link: "",
+    //     }
+    // ]
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:5000/api/department/:${collegeName}`)
+                stDepartment(response.data)
+
+            }
+            catch (error) {
+                console.log(error)
+            }
         }
-    ]
+        fetchData()
 
-    const department = [
-        {
-            id: 1,
-            imgSrc: "../../../../assets/images/department.webp",
-            title: "Department of Management Studies, IIT Kharagpur - [DoMS IIT Madras]",
-            location: "Chennai, Tamil Nadu",
-            course: "M.Phil/Ph.D in Management",
-            fees: "15650",
-            view_all_courses_link: ""
-        },
-    ]
+    }, []);
 
-    // Demo data array for cards
+
+    // const department = [
+    //     {
+    //         id: 1,
+    //         college:"IT Kharagpur",
+    //         imgSrc: "../../../../assets/images/department.webp",
+    //         title: "Department of Management Studies, IIT Kharagpur - [DoMS IIT Madras]",
+    //         location: "Chennai, Tamil Nadu",
+    //         course: "M.Phil/Ph.D in Management",
+    //         fees: "15650",
+    //         view_all_courses_link: ""
+    //     },
+
+    // ]
+
+    
     const questions = [
         {
             id: 1,
+            college:"IT Kharagpur",
             title: "How is the food at IIT Madras?",
             imgSrc: "xyz",
             author: "Megha Banerjee",
@@ -61,6 +84,7 @@ const DepartmentDynamic = () => {
         },
         {
             id: 2,
+            college:"IT Kharagpur",
             title: "How is the food at IIT csds?",
             imgSrc: "xyz",
             author: "Avinash Banerjee",
@@ -69,9 +93,28 @@ const DepartmentDynamic = () => {
             read_more_link: "",
             likes: 1,
             dislikes: 0
+        },
+        {
+            id: 3,
+            college:"IT Kharagpur",
+            title: "How is the food at IIT csds?",
+            imgSrc: "xyz",
+            author: "Avinash purohit",
+            author_desc: "Studied at IIM Kharagpur",
+            description: "IIT Madras has a 4 meal per day program. There are both North Indian and South Indian menus. Even though he has retired from IIT Madras, I would like to name V. Balakrishnan sir from the Physics Department as the answer to this question. He is one of the most respected faculty members of all time at IIT Madras.",
+            read_more_link: "",
+            likes: 1,
+            dislikes: 0
         }
     ];
-    
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCount(questions.length);
+        }, 1000);
+    });
+
+
 
     return (
         <div className="department_section">
@@ -79,7 +122,7 @@ const DepartmentDynamic = () => {
                 {/* 1st section */}
                 <div className="departments_div">
                     <div className="departments_div_wrapper">
-                        <h5>{fixedData[0].page_title}</h5>
+                        <h5>{collegeName}</h5>
 
                         {
                             department.map((row) => (
@@ -150,8 +193,8 @@ const DepartmentDynamic = () => {
                 <div className="answered_ques">
                     <div className="answered_ques_wrapper">
                         <div className="qna_page_link">
-                            <h5> {fixedData[0].answered_ques_title} </h5>
-                            <NavLink to={fixedData[0].view_all_link}>View All</NavLink>
+                            <h5> {collegeName}: {count} Answered Questions </h5>
+                            <NavLink to={collegeName}>View All</NavLink>
                         </div>
 
                         <div className="question_wrapper">
