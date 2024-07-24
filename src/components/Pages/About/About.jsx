@@ -13,11 +13,7 @@ import { LiaUniversitySolid } from "react-icons/lia";
 import { FaBookOpenReader } from "react-icons/fa6";
 import { IoIosPeople } from "react-icons/io";
 import { GiCoffeeCup } from "react-icons/gi";
-
-
-import { LiaUniversitySolid } from "react-icons/lia";
 import { FaBookReader } from "react-icons/fa";
-import { IoIosPeople } from "react-icons/io";
 import { FaMugHot } from "react-icons/fa6";
 
 const About = () => {
