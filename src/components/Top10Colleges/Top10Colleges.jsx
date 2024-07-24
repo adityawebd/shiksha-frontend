@@ -15,7 +15,7 @@ const Top10Colleges = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/top10colleges`)
+                const response = await axios.get(`http://157.173.221.48:5000/api/top10colleges`)
                 setTabData(response.data)
 
             }
@@ -34,7 +34,7 @@ const Top10Colleges = () => {
                 
                 <h2 className='mb-4'>Top 10 Colleges</h2>
 
-                <Tabs defaultActiveKey="BCA" id="uncontrolled-tab-example" className="mb-3 tabs">
+                <Tabs defaultActiveKey="BE/B.Tech" id="uncontrolled-tab-example" className="mb-3 tabs">
 
 
                     {tabData.map((info) => (

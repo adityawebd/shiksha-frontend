@@ -153,9 +153,9 @@ const Contact = () => {
                                         <span> <FaLocationDot />  </span>
                                         <p>
 
-                                            AHIKSHA HELPLINE
+                                            SHIKSHA HELPLINE
                                             XTH Floor,  Xyz Tower, XYZ Place
-                                            New Delhi, Delhi, 110058
+                                            New Delhi, Delhi, 1100XZ
                                         </p>
                                     </div>
                                     <div className="items">

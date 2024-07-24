@@ -49,6 +49,11 @@
     background-color: var(--primary-clr);
     color: var(--white-clr);
 }
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: var(--white-clr) !important;
+    background-color: var(--primary-clr) !important;
+    border-color: var(--primary-clr) !important;
+}
 .top10colleges .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: var(--white-clr);
     background-color: var(--primary-clr);
@@ -131,7 +136,9 @@
     height: 40px;
     font-size: 14px;
 }
-
+.top10college_card .card_body ul:first-child {
+    margin-right: 10px;
+}
 .top10college_card .card_body ul:first-child li {
     color: #000;
     font-weight: 500;

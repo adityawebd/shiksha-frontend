@@ -53,9 +53,10 @@ const TopExams = () => {
                     modules={[Autoplay, Navigation, A11y]}
                     className="swiper-wrapper mx-auto mb-4"
                 >
+                    
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="Neet"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -65,7 +66,7 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="Cat"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -75,7 +76,7 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="JEE Advance"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -85,7 +86,7 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="JEE Main"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -95,7 +96,7 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="NMAT"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -105,7 +106,7 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="MAT"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -115,7 +116,7 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="Gate"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"
@@ -125,7 +126,47 @@ const TopExams = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <TopExamsCard
-                            organization="NEET"
+                            organization="XAT"
+                            participating_colleges="9987"
+                            exam_date="May 05, 2024"
+                            exam_level="National"
+                            application_process_link=""
+                            exam_info_link=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <TopExamsCard
+                            organization="BISAT"
+                            participating_colleges="9987"
+                            exam_date="May 05, 2024"
+                            exam_level="National"
+                            application_process_link=""
+                            exam_info_link=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <TopExamsCard
+                            organization="IIT JAM"
+                            participating_colleges="9987"
+                            exam_date="May 05, 2024"
+                            exam_level="National"
+                            application_process_link=""
+                            exam_info_link=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <TopExamsCard
+                            organization="Cat"
+                            participating_colleges="9987"
+                            exam_date="May 05, 2024"
+                            exam_level="National"
+                            application_process_link=""
+                            exam_info_link=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <TopExamsCard
+                            organization="CUET"
                             participating_colleges="9987"
                             exam_date="May 05, 2024"
                             exam_level="National"

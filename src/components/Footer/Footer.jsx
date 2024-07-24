@@ -90,7 +90,7 @@ const Footer = () => {
                         <span><a href=""><FaInstagram /></a></span>
                         <span><a href=""><FaTwitter /></a></span>
                     </div>
-                    <div className="copyright">&copy; 2024 TailGrids</div>
+                    <div className="copyright">&copy; 2024 Shiksha-Helpline</div>
                 </div>
             </div>
         </div>

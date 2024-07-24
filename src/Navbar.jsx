@@ -83,11 +83,11 @@ const Navbar = () => {
                                     <NavLink className="nav-link" onClick={() => handleItemClick('item5')}
                                         style={{ color: activeItem === 'item5' ? '#fff' : '', background: activeItem === 'item5' ? '#3D52A0' : '' }}>Pages</NavLink>
                                     <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                                        <li class="dropdown_item-1"><a href="/collegepage">College Page</a></li>
-                                        <li class="dropdown_item-2"><a href="">Services 2</a></li>
-                                        <li class="dropdown_item-3"><a href="">Services 3</a></li>
-                                        <li class="dropdown_item-4"><a href="">Services 4</a></li>
-                                        <li class="dropdown_item-5"><a href="">Services 5</a></li>
+                                        <li class="dropdown_item-1"><a href="">Page 1</a></li>
+                                        <li class="dropdown_item-2"><a href="">Page 2</a></li>
+                                        <li class="dropdown_item-3"><a href="">Page 3</a></li>
+                                        <li class="dropdown_item-4"><a href="">Page 4</a></li>
+                                        <li class="dropdown_item-5"><a href="">Page 5</a></li>
                                     </ul>
                                 </li>
                             </ul>
