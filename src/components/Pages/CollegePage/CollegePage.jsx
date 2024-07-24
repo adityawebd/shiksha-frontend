@@ -38,7 +38,7 @@ const CollegePage = () => {
   };
   
   return (
-    <div>
+    <div className='college_page_responsive'>
         <section className="collegepage_section">
           <figure className='college_img'>
             <img src={CollegeIMG} alt="" />

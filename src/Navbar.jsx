@@ -119,7 +119,7 @@ const Navbar = () => {
                             </div>
                             <div className="contact_button common_new_btn text-center mt-4 mb-5">
                                 <span><FaGraduationCap /></span>
-                                <a href="">Contact Us</a>
+                                <NavLink to="/contact-us">Contact Us</NavLink>
                             </div>
                         </div>
                     ) :
@@ -131,7 +131,7 @@ const Navbar = () => {
                                 </div>
                                 <div className="contact_button common_new_btn text-center mt-4 mb-5">
                                     <span><FaGraduationCap /></span>
-                                    <a href="">Contact Us</a>
+                                    <NavLink to="/contact-us">Contact Us</NavLink>
                                 </div>
                             </div>
                         )
