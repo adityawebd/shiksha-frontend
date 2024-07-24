@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './about.css'
 import AOS from 'aos';
 import Navbar from '../../../Navbar'
-
+ 
 import missionIMG from '../../../assets/images/mission.svg'
 import visionIMG from '../../../assets/images/vision.svg'
 import StudentIMG from '../../../assets/images/about/students.svg'
