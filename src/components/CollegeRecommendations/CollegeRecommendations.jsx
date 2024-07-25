@@ -44,45 +44,60 @@ const CollegeRecommendations = () => {
     // For demonstration purposes, let's use dummy data
     const recommendations = [
       {
-        name: 'College A',
+        name: 'MDI Murshidabad',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science', 'Business'],
+        courses: ['Estd 2014', 'Murshidaba, West Bengal', 'PGDM 1st Yr Fees:₹788,110'],
       },
       {
-        name: 'College B',
+        name: 'IMI Bhuneshwar ',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 2011', 'Bhubaneswar, Odisha Science', 'PGDM Total Fees:₹1,320,000'],
       },
       {
-        name: 'College C',
+        name: 'BML Munjal University ',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 2014', 'Gurgaon, Haryana', '₹6.7 Lakhs (1st Year Fees)(pgdm)'],
       },
       {
-        name: 'College D',
+        name: 'SOIL Institute of Management ',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 2008', 'Gurgaon, Haryana', '1st Yr Fees:₹1,533,226(pgdm)'],
       },
       {
-        name: 'College E',
+        name: 'Alliance University Bangalore ',
         ranking: 2,
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 2010', 'Bangalore, Karnataka', 'Total Fees:₹115,500(pgdm)'],
       },
       {
-        name: 'College F',
+        name: 'Jaipuria institute of Management Noida ',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 2004', 'Noida, Uttar Pradesh', '1st Yr Fees:₹740,000 (pgdm)'],
       },
       {
-        name: 'College G',
+        name: 'Woxsyn University Hyderabad ',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 2014', 'Hyderabad, Telangana', '1st Yr Fees:₹770,000 (MBA)'],
       },
       {
-        name: 'College H',
+        name: 'NDIM new Delhi ',
         image: CollegeBg,
-        courses: ['Engineering', 'Computer Science'],
+        courses: ['Estd 1992', 'New Delhi, Delhi NCR', '1st Yr Fees:₹575,000'],
+      },
+      {
+        name: ' ITM Navi Mumbai ',
+        image: CollegeBg,
+        courses: ['Estd 1991', 'Navi Mumbai, Maharashtra', 'Total Fees:₹1,195,000 (MBA)'],
+      },
+      {
+        name: 'Universal Business School Mumbai ',
+        image: CollegeBg,
+        courses: ['Estd 2009', 'Karjat, Maharashtra', 'PGDM ₹11.98 Lakhs (Total Fees)'],
+      },
+      {
+        name: 'Praxis School of Business Kolkata ',
+        image: CollegeBg,
+        courses: ['Estd 2007', 'Kolkata, West Bengal', '[PGDM] Total Fees:₹951,000'],
       },
     ];
     setRecommendedColleges(recommendations);

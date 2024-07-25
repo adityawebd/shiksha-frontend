@@ -109,6 +109,7 @@
 }
 
 .aobut_for_wrapper .about_for_card {
+    width: 30%;
     border-radius: 10px 10px 0 0;
 }
 
@@ -131,14 +132,11 @@
     margin: 0 50px;
 }
 
-.about_long_way_wrapper .long_way_card img {
-    border: 1px solid var(--dark-gray);
-    width: 100px;
-    height: 100px;
-}
+
 
 .about_long_way_wrapper .long_way_card .no_of_colleges {
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .about_long_way_wrapper .long_way_card .title {

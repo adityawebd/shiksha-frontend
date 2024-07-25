@@ -21,7 +21,13 @@
     padding: 20px;
     border-radius: 10px;
 }
-
+.double_widget {
+    /* border: 1px solid red;   */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
 .double_widget .classexam_widget,
 .single_widget .classexam_widget {
     margin-right: 10px;
@@ -30,11 +36,13 @@
 
 .classexam_widget {
     border: 1px solid #000;
-    width: 160px;
+    width: 50%;
+    height:fit-content;
     display: flex;
     border-radius: 30px;
     background-color: var(--white-clr);
     position: relative;
+    /* overflow: scroll; */
 }
 .classexam_widget .classexam_widget_icon {
     background-color: #000;
@@ -64,7 +72,7 @@
 .classexam_widget p {
     position: absolute;
     top: 6px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     margin-left: 50px;
     font-weight: 700;
@@ -74,7 +82,7 @@
     cursor: pointer;
 }
 .classexam_widget:hover .classexam_widget_icon {
-    width: 160px;
+    width: 100%;
     transition: all 1s;
     border-radius: 30px;
 }
@@ -104,8 +112,12 @@
     .classexam {
         padding-top: 700px;
     }    
+    .double_widget {
+        /* border: 1px solid red;   */
+        flex-direction: column;
+    }
     .classexam_widget {
-        width: 130px;
+        width: 100%;
     }
     .classexam_widget .classexam_widget_icon {
         height: 26px; /* Add fixed height */
@@ -138,8 +150,12 @@
     .classexam {
         padding-top: 700px;
     }    
+    .double_widget {
+        /* border: 1px solid red;   */
+        flex-direction: column;
+    }
     .classexam_widget {
-        width: 130px;
+        width: 100%;
     }
     .classexam_widget .classexam_widget_icon {
         height: 26px; /* Add fixed height */
@@ -172,6 +188,14 @@
     .classexam {
         padding-top: 580px;
     }
+    .double_widget {
+        /* border: 1px solid red;   */
+        flex-direction: column;
+    }
+    .classexam_widget {
+        width: 100%;
+    }
+    
     .classexam_wrapper .second_div_margin_top {
         margin-top: 30px;
     }
@@ -188,7 +212,6 @@
 
     .classexam_widget {
         border: 1px solid #000;
-        width: 160px;
         display: flex;
         border-radius: 30px;
         background-color: var(--white-clr);
@@ -266,6 +289,7 @@
         margin-left: 46px;
         top:10px;
     }
+    
 
 }
 

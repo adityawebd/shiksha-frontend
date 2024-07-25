@@ -43,7 +43,7 @@ const ReviewsDynamic = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/reviews`)
+                const response = await axios.get(`http://157.173.221.48:5000/api/reviews`)
                 setReviewsData(response.data)
 
             }

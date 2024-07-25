@@ -46,16 +46,21 @@
     /* border: 1px solid red; */
     padding: 20px;
     color: var(--reddish-white);
-    margin-top: 70px !important;
+    margin-top: -10px !important;
     /* background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,hsl(0 0% 0% / 1)); */
 
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* Improved gradient */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.486)); /* Improved gradient */
 
 }
 .college_title {
-    margin-bottom: 30px;
+  /* border: 1px solid red; */
+  height: 60px;
+    /* margin-top: -70px; */
+    /* margin-bottom: 50px; */
     position: relative;
-    width: max-content;
+    padding-right: 20px;
+    width: 100%;
+    font-size: 18px;
   }
   
   .card:hover .college_title::after,
@@ -117,6 +122,11 @@
 
   .college_details {
     color: rgb(255, 255, 255/0.85);
+    /* border: 1px solid red; */
+  }
+  .college_details ul {
+    /* border: 1px solid blue; */
+    height: 140px;
   }
   
   @media (prefers-reduced-motion: reduce) {

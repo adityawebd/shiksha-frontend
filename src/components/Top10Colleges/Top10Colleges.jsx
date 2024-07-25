@@ -15,7 +15,7 @@ const Top10Colleges = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/top10colleges`)
+                const response = await axios.get(`http://157.173.221.48:5000/api/top10colleges`)
                 setTabData(response.data)
 
             }

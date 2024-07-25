@@ -28,23 +28,23 @@ const ExploreStudy = () => {
                         <div className="row">
                             <div className="col-md-6 explore_div">
                                 <ExploreStudyCard src={StateIMG} name="Delhi" />
-                                <ExploreStudyCard src={StateIMG} name="Haryana" />
-                            </div>
+                                <ExploreStudyCard src={StateIMG} name="Banglore" />
+                            </div>  
                             <div className="col-md-6 explore_div">
                                 <ExploreStudyCard src={StateIMG} name="Mumbai" />
-                                <ExploreStudyCard src={StateIMG} name="Chennai" />
+                                <ExploreStudyCard src={StateIMG} name="West bengal" />
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="row">
                             <div className="col-md-6 explore_div">
-                                <ExploreStudyCard src={StateIMG} name="Ahemdabad" />
-                                <ExploreStudyCard src={StateIMG} name="Delhi" />
+                                <ExploreStudyCard src={StateIMG} name="Chennai" />
+                                <ExploreStudyCard src={StateIMG} name="Ahmedabad" />
                             </div>
                             <div className="col-md-6 explore_div">
-                                <ExploreStudyCard src={StateIMG} name="Delhi" />
-                                <ExploreStudyCard src={StateIMG} name="Delhi" />
+                                <ExploreStudyCard src={StateIMG} name="Kolkata" />
+                                <ExploreStudyCard src={StateIMG} name="Punjab" />
                             </div>
                         </div>
                     </div>
