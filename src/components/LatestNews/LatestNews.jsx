@@ -194,8 +194,10 @@ const LatestNews = () => {
             />
           </SwiperSlide>
 
-          <div className="swiper-button-prev"></div> {/* Previous button */}
-          <div className="swiper-button-next"></div> {/* Next button */}
+          {/* <div className="swiper-button-prev"></div>  */}
+          {/* Previous button */}
+          {/* <div className="swiper-button-next"></div>  */}
+          {/* Next button */}
         </Swiper>
       </div>
     </section>

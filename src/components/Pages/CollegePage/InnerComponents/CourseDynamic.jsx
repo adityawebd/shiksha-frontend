@@ -17,17 +17,18 @@ import Modal from 'react-modal';
 import IMG1 from '../../../../assets/images/1_1.jpg'
 import DecisionICON from '../../../../assets/images/decision.png'
 
-    const customStyles = {
-        content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-        },
-    };
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
 
+Modal.setAppElement('#root');
 
 
 const CourseDynamic = () => {

@@ -1,81 +1,132 @@
 :root {
-    --primary-clr: #3D52A0;
-    --secondary-color: #7091E6;
-    --dark-gray: #8697c4;
-    --light-gray: #adbbda;
-    --more-light-gray: #7091e610;
-    --reddish-white: #ede8f5;
-    --white-clr: #ffffff;
-    --black_clr: #000000;
-    --star-clr: #FFA100;
-    --green-clr: #099250;
-    --red-clr: #D92D20;
+  --primary-clr: #3D52A0;
+  --secondary-color: #7091E6;
+  --dark-gray: #8697c4;
+  --light-gray: #adbbda;
+  --more-light-gray: #7091e610;
+  --reddish-white: #ede8f5;
+  --white-clr: #ffffff;
+  --black_clr: #000000;
+  --star-clr: #FFA100;
+  --green-clr: #099250;
+  --red-clr: #D92D20;
 }
 
 .bg_reddish {
-    background-color: var(--reddish-white);
+  background-color: var(--reddish-white);
 }
+
 .secondary_clr {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .qna .navbar {
-    /* border: 1px solid #000; */
-    margin-top: -1px;
+  /* border: 1px solid #000; */
+  margin-top: -1px;
 }
 
 .qna .navbar_fixed {
-    /* border: 1px solid #000; */
-    margin-top: 20px;
+  /* border: 1px solid #000; */
+  margin-top: 20px;
 }
 
 
+.qna_about_us {
+  background-image: linear-gradient(180deg, rgba(150, 105, 97, 0.67) 0%, rgba(2, 0, 76, 0.84) 100%), url(https://png.pngtree.com/thumb_back/fh260/background/20201010/pngtree-thumb-up-sign-with-neon-effect-lights-like-in-silhouette-ok-image_407900.jpg) !important;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-clr);
+}
 
 
-.filters {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .filter {
-    display: flex;
-    flex-direction: column;
-  }
+.qna_filters {
+  background-color: var(--white-clr);
+  padding: 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
-  .reset-button {
-    align-self: flex-end;  /* Align button to the end */
-    padding: 5px 10px;
-    margin-top: 22px;  /* Align with select elements */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .reset-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .results .qa {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .results .qa h2 {
-    margin-top: 0;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .pagination button {
-    padding: 5px 10px;
-  }
+.qna_filter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.qna_filter label {
+  font-weight: 600;
+}
+.qna_filter select {
+  border: 1px solid var(--dark-gray);
+  border-radius: 30px;
+  padding: 2px 20px 2px 10px;
+  outline: none;
+}
+
+.qna-reset-button {
+  align-self: flex-end;
+  /* Align button to the end */
+  padding: 3px 20px;
+  margin-top: 22px;
+  /* Align with select elements */
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.4s all;
+}
+
+.qna-reset-button:hover {
+  background-color: var(--primary-clr);
+}
+.qna-filter-results {
+  /* border: 1px solid red; */
+  padding: 0;
+}
+.qna-filter-results .qa {
+  border: 1px solid #ddd;
+  background-color: var(--white-clr);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.qna-filter-results .qa h5 {
+  margin-top: 0;
+}
+
+.qna-filter-results .qa img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--dark-gray);
+}
+.qna-filter-results .qa .qna_result_author_name {
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 30px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  color: var(--white-clr);
+}
+.pagination button:first-child {
+  background-color: var(--secondary-color);
+}
+.pagination button:last-child {
+  background-color: var(--primary-clr);
+}
