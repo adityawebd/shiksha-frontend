@@ -153,7 +153,7 @@ const Contact = () => {
                                         <span> <FaLocationDot />  </span>
                                         <p>
 
-                                            SHIKSHA HELPLINE
+                                            Siksha HELPLINE
                                             XTH Floor,  Xyz Tower, XYZ Place
                                             New Delhi, Delhi, 1100XZ
                                             <a href="#map">Unit-02 Greencity Apartment Chandmari

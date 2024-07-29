@@ -38,7 +38,7 @@ const About = () => {
                             <h3>Vision</h3>
                             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque similique illum soluta enim dolore nostrum at, alias quibusdam minus quisquam molestias libero a quasi blanditiis deleniti! Atque explicabo aliquid, mollitia blanditiis provident amet, rerum quae perferendis voluptates quasi vero? Corporis.</p> */}
                         </div>
-                        <div data-aos="fade-up" className="shiksha-helpline">
+                        <div data-aos="fade-up" className="Siksha-helpline">
                             <h2>Siksha Helpline</h2>
                             <p>Founded in 2019, Siksha Helpline stands as India's most trusted educational consultancy firm. Our mission is to illuminate the path to higher education with transparency and personalized support.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos totam et in odit ipsum est tempora sint error temporibus blanditiis, reiciendis vel rerum distinctio aut necessitatibus enim numquam iure, omnis dolorum. Placeat, rem ullam doloremque cumque, error, alias quaerat sint deserunt cum voluptas incidunt amet veniam quasi accusantium sit?</p>
