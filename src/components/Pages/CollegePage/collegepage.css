@@ -52,15 +52,15 @@
 /* ----- collegepage_section_about --- */
 
 .collegepage_section_about {
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
 
-    background-color: var(--white-clr);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     width: 70%;
-    margin-top: 200px;
     margin-left: 20%;
     padding: 40px 60px;
 }
@@ -203,7 +203,7 @@
 
 .collegepage_content {
     background-color: var(--reddish-white);
-    padding-top: 100px;
+    padding-top: 1px;
 }
 
 

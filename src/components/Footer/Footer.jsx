@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import FooterBrand from '../../assets/logo.png'
+import FooterBrand from '../../assets/logo-white-box.png'
 
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -16,7 +16,7 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-md-6 col-sm-6 col-6">
                                 <a href="/"><img src={FooterBrand} alt="footer-logo" /></a>
-                                <p>Sed ut perspiciatis undmnis is iste natus error sit amet voluptatem totam rem aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates qui iusto nemo minima enim? um et!</p>
+                                <p>Founded in 2019, Siksha Helpline stands as India's most trusted educational consultancy firm. Our mission is to illuminate the path to higher education with transparency and personalized support.</p>
                             </div>
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Quick Links</h6>
@@ -90,7 +90,7 @@ const Footer = () => {
                         <span><a href=""><FaInstagram /></a></span>
                         <span><a href=""><FaTwitter /></a></span>
                     </div>
-                    <div className="copyright">&copy; 2024 Shiksha-Helpline</div>
+                    <div className="copyright">&copy; 2024 Siksha-Helpline</div>
                     <div className="copyright">&copy; 2024 Siksha Helpline</div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 'use client'
 import { React, useState, useEffect } from 'react'
-import LOGO from './assets/logo.png'
-import DarkLOGO from './assets/logo.png'
+import LOGO from './assets/logo-white-box.png'
+import DarkLOGO from './assets/logo-white-box.png'
 import './navbar.css'
 import { NavLink } from 'react-router-dom';
 
@@ -10,15 +10,73 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-
+import { IoMdNotifications } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import { FaGraduationCap } from "react-icons/fa6";
+import Modal from 'react-modal';
 
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
+
+Modal.setAppElement('#root');
 
 const Navbar = () => {
 
     const [scrolled, setScrolled] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [activeItem, setActiveItem] = useState(null);
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [notificationType, setNotificationType] = useState('normal'); // State for dropdown selection
+    // const [notifications, setNotifications] = useState([]); // State to store notifications
+    const [notifications, setNotifications] = useState([  // demo data for notifications
+        {
+            id: 1,
+            type: 'normal',
+            image: 'path/to/image1.jpg',
+            title: 'Notification 1',
+            message: 'This is the first notification message.',
+            date: '2023-07-24',
+            link: '#'
+        },
+        {
+            id: 2,
+            type: 'live',
+            image: 'path/to/image2.jpg',
+            title: 'Live Notification 1',
+            message: 'This is the first live notification message.',
+            date: '2023-07-24',
+            link: '#'
+        },
+        {
+            id: 3,
+            type: 'normal',
+            image: 'path/to/image3.jpg',
+            title: 'Notification 2',
+            message: 'This is the second notification message.',
+            date: '2023-07-25',
+            link: '#'
+        },
+        {
+            id: 4,
+            type: 'live',
+            image: 'path/to/image4.jpg',
+            title: 'Live Notification 2',
+            message: 'This is the second live notification message.',
+            date: '2023-07-25',
+            link: '#'
+        }
+    ]);
+
+
 
     const handleItemClick = (itemName) => {
         setActiveItem(itemName === activeItem ? null : itemName);
@@ -26,6 +84,30 @@ const Navbar = () => {
     const IconStyling = {
         color: '#fff'
     }
+
+
+    const openModal = () => {   //function to open modal
+        setIsOpen(true);
+    };
+
+    const closeModal = () => {  //function to close modal
+        setIsOpen(false);
+    };
+
+    const fetchNotifications = async () => {         //for notifications
+        // Replace with backend API endpoint
+        const response = await fetch('YOUR_BACKEND_API_ENDPOINT');
+        const data = await response.json();
+        setNotifications(data);
+    };
+
+    useEffect(() => {
+        if (modalIsOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [modalIsOpen]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -42,12 +124,18 @@ const Navbar = () => {
         };
     }, []);
 
+    useEffect(() => { //for notifications
+        if (modalIsOpen) {
+            fetchNotifications();
+        }
+    }, [modalIsOpen]);
+
     return (
         // <nav class={color ? 'navbar navbar-expand-lg navbar_fixed navbar_dark' : 'navbar_fixed navbar_dark'}>
         <nav className={`navbar navbar-expand-lg  ${scrolled ? 'navbar_fixed navbar_dark' : ''}`}>
             {/* <a className={`navbar-brand ${scrolled ? DarkLOGO : LOGO} `} href="#"> */}
             <NavLink className={`navbar-brand`} to="/">
-                <img src={scrolled ? DarkLOGO : LOGO} alt="logo" />
+                <img src={scrolled ? DarkLOGO : LOGO} alt="logos" />
             </NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -94,7 +182,6 @@ const Navbar = () => {
                         )
                 }
 
-
                 <div className="social_media_links ms-auto">
                     <div className="icon_div">
                         <FaTwitter style={IconStyling} />
@@ -107,6 +194,47 @@ const Navbar = () => {
                     </div>
                     <div className="icon_div">
                         <FaInstagram style={IconStyling} />
+                    </div>
+                    <div className="noti">
+                        <button className="notification_icons" onClick={openModal}>
+                            <IoMdNotifications />
+                        </button>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            // onAfterOpen={afterOpenModal}
+                            onRequestClose={closeModal}
+                            style={customStyles}
+                            contentLabel="Example Modal"
+                        >
+                            <div className="notification_modal_wrapper">
+                                <h5>Notification</h5>
+
+                                <div className="noti_content mt-3">
+                                    <select
+                                        value={notificationType}
+                                        onChange={(e) => setNotificationType(e.target.value)}
+                                    >
+                                        <option value="normal">Notification</option>
+                                        <option value="live">Live Notification</option>
+                                    </select>
+                                    <div className="notifications mt-3">
+                                        {notifications.filter(notification => notification.type === notificationType).map(notification => (
+                                            <div className="nav_notification_div" key={notification.id}>
+                                                <div className="d-flex align-items-center">
+                                                    <img src={notification.image} alt="" />
+                                                    <div className="nav_notification_title ml-2">{notification.title}</div>
+                                                </div>
+                                                <p className='nav_notification_para'>{notification.message}</p>
+                                                <div className="d-flex justify-content-between">
+                                                    <div className='nav_noti_date'>{notification.date}</div>
+                                                    <a href={notification.link} className='nav_noti_readMore'>Read More</a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </Modal>
                     </div>
                 </div>
 

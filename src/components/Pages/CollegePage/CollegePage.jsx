@@ -150,10 +150,10 @@ console.log("data for upper navifation",data)
                             <a className="nav-link" id="courses-tab" data-toggle="tab" href="#courses" role="tab" aria-controls="courses" aria-selected="false">
                             <span></span> Courses & Fees</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link" id="distance-edu-tab" href={`/collegepage/${collegeName}/distance-education/`}>
                             <span></span> Distance Education</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link" id="admission-tab" data-toggle="tab" href="#admission" role="tab" aria-controls="admission" aria-selected="false">
                             <span></span> Admission 2024</a>
