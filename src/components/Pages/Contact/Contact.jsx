@@ -153,10 +153,9 @@ const Contact = () => {
                                         <span> <FaLocationDot />  </span>
                                         <p>
 
-                                            SHIKSHA HELPLINE
-                                            XTH Floor,  Xyz Tower, XYZ Place
-                                            New Delhi, Delhi, 1100XZ
-                                            <a href="#map">Unit-02 Greencity Apartment Chandmari
+                                            
+                                            
+                                            <a href="#map">Siksha HELPLINE Unit-02 Greencity Apartment Chandmari
                                             Near MS College Motihari, East Champaran,
                                             Bihar, 845401</a>
                                         </p>

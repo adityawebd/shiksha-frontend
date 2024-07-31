@@ -151,7 +151,7 @@ const DepartmentDynamic = () => {
 
                 {/* 2nd section */}
                 <div className="website_rating">
-                    <h5>How likely are you to recommend shiksha-helpline.com to a friend or a colleague?</h5>
+                    <h5>How likely are you to recommend Siksha-helpline.com to a friend or a colleague?</h5>
 
                     <div className="likely">
                         <div className='number'>

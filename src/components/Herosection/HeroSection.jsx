@@ -6,7 +6,7 @@ import { Typewriter } from 'react-simple-typewriter'
 import { NavLink } from 'react-router-dom';
 
 import { FaSearch } from "react-icons/fa";
-
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import HeroBG from  '../../assets/videos/college1-crop.mp4'
 import SetYourGoal from '../SetYourGoal/SetYourGoal';
 import TopCollection from '../TopCollection/TopCollection';
@@ -23,9 +23,11 @@ const HeroSection = () => {
   return (
     <div>
       <section className="herosection">
+        
         <video autoPlay loop muted playsInline className="video_bg">
               <source src={HeroBG} type="video/mp4" />
         </video>
+        
         <Navbar />
         <div className="herosection_wrapper">
           <h2><span className='fixed_h'>Find Over</span> {' '} 
