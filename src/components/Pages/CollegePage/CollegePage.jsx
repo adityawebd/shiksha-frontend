@@ -42,7 +42,6 @@ const CollegePage = () => {
         try {
           
             const srver = process.env.REACT_APP_SERVER;
-            console.log("server data is ",srver)
             const response = await axios.get(`${srver}:5000/api/collegelist/`+collegeName) //localhost
             
             setData(response.data)
