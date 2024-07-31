@@ -37,6 +37,7 @@
 }
 
 .mission_vision {
+    /* border: 1px solid red; */
     display: flex;
 }
 
@@ -46,21 +47,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .mission_vision .m_s_div {
     width: 30%;
     background-color: var(--secondary-color);
     color: var(--white-clr);
-    padding: 30px 100px;
+    padding: 30px;
 }
 
 .mission_vision .m_s_div:first-child {
-    border-radius: 0 300px 300px 0;
+    border-radius: 0 10px 10px 0;
 }
 
 .mission_vision .m_s_div:last-child {
-    border-radius: 300px 0 0 300px;
+    border-radius: 10px 0 0 10px;
 }
 
 .mission_vision .m_s_div figure {
@@ -73,22 +75,22 @@
     width: 40%;
 }
 
-.mission_vision .shiksha-helpline {
-    /* border: 1px solid red; */
-    width: 40%;
+.mission_vision .siksha_helpline {
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px 0;
 }
 
-.mission_vision .shiksha-helpline h2 {
+.mission_vision .siksha_helpline h2 {
     color: var(--star-clr);
     font-size: 50px;
 }
 
-.mission_vision .shiksha-helpline p {
+.mission_vision .siksha_helpline p {
     /* background-color: var(--white-clr); */
     width: 80%;
 }
@@ -177,8 +179,12 @@
 
 
 @media (max-width: 425px) {
+    .hero_about_us {
+        height: 20vh;
+    }
     .mission_vision {
         flex-direction: column;
+        padding: 20px;
     }
 
     .mission_vision .m_s_div {
@@ -200,17 +206,16 @@
         border-radius: 20px;
     }
 
-    .mission_vision .shiksha-helpline {
-        /* border: 1px solid red; */
+    .mission_vision .siksha_helpline {
+        padding: 40px 0;
         width: 100%;
-        padding: 20px 0;
     }
 
-    .mission_vision .shiksha-helpline h2 {
-        font-size: 36px;
+    .mission_vision .siksha_helpline h2 {
+        font-size: 24px;
     }
 
-    .mission_vision .shiksha-helpline p {
+    .mission_vision .siksha_helpline p {
         /* background-color: var(--white-clr); */
         width: 80%;
     }
@@ -228,19 +233,28 @@
         border-radius: 10px;
     }
     .about_long_way .about_long_way_wrapper {
-        flex-direction: column;
+        /* flex-direction: column; */
+        /* border: 1px solid red; */
+        flex-wrap: wrap;
     }
     .about_long_way .long_way_card {
+        /* border: 1px solid red; */
+        width: 30%;
         margin-bottom: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
     .team_img {
         height: 30vh;
+        padding: 0 10px;
         text-align: center;
     }
 
 }
-
 @media (min-width: 426px) and (max-width: 768px) {
+    .hero_about_us {
+        height: 30vh;
+    }
     .mission_vision {
         flex-direction: column;
         padding: 0 50px;
@@ -265,19 +279,75 @@
         border-radius: 20px;
     }
 
-    .mission_vision .shiksha-helpline {
+    .mission_vision .siksha_helpline {
         /* border: 1px solid red; */
         width: 100%;
         padding: 20px 0;
     }
 
-    .mission_vision .shiksha-helpline h2 {
+    .mission_vision .siksha_helpline h2 {
         font-size: 36px;
     }
 
-    .mission_vision .shiksha-helpline p {
+    .mission_vision .siksha_helpline p {
         /* background-color: var(--white-clr); */
-        width: 80%;
+        width: 90%;
+    }
+
+    
+
+
+    .aobut_for_wrapper {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .about_for img {
+        width: 100%;
+    }
+    .aobut_for_wrapper .about_for_card {
+        border-radius: 10px;
+    }
+    .about_long_way .about_long_way_wrapper {
+        flex-direction: row;
+    }
+    .about_long_way .long_way_card {
+        margin-bottom: 20px;
+    }
+    .team_img {
+        height: 30vh;
+        text-align: center;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mission_vision {
+        flex-direction: row;
+    }
+
+    .mission_vision .m_s_div {
+        /* border: 1px solid red; */
+        flex-direction: column;
+    }
+
+    .mission_vision .m_s_div {
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    .mission_vision .siksha_helpline {
+        /* border: 1px solid red; */
+        width: 40%;
+        padding: 20px 0;
+    }
+
+    .mission_vision .siksha_helpline h2 {
+        font-size: 36px;
+    }
+
+    .mission_vision .siksha_helpline p {
+        /* background-color: var(--white-clr); */
+        width: 90%;
     }
 
     

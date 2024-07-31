@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
                 <Navbar />
 
                 <div className="terms_and_conditions py-5">
-                    <div class="container">
+                    <div className="container">
                         <h1>Terms and Conditions</h1>
 
                         <p>Welcome to Siksha Helpline! These terms and conditions govern your use of Siksha Helpline's services, including counseling and admission assistance. By accessing and using our services, you agree to these terms in full. If you do not agree with any part of these terms, please refrain from using our services.</p>
@@ -31,7 +31,7 @@ const TermsAndConditions = () => {
                         <p>Siksha Helpline reserves the right to modify these terms and conditions for service users at any time. We encourage you to review these terms periodically for updates.
                         </p>
 
-                        <div class="section">
+                        <div className="section">
                             <h2>For any clarification, please contact: </h2>
                             <p><b>Address: </b>Siksha Helpline Pvt. Ltd.
                                 Green City, near MS College,

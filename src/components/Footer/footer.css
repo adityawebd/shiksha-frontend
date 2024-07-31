@@ -13,8 +13,8 @@ footer {
     background-image: url(../../assets/images/footer_bg.jpg);
     padding: 0 20px 0 140px;
     }
-.footer_brand {
-    padding-right: 10px;
+.footer_logo img {
+    border-radius: 50%;
 }
 .footer_body img {
     width: 40px;

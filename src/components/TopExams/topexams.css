@@ -51,8 +51,9 @@
 **/
 
 .card__date {
+    background-color: var(--white-clr);
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
     width: 45px;
     height: 45px;
@@ -62,6 +63,14 @@
     text-align: center;
     font-weight: 700;
     line-height: 13px;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.card__date img {
+    /* border: 1px solid red; */
+    padding-bottom: 6px;
 }
 
 .card__date__day {

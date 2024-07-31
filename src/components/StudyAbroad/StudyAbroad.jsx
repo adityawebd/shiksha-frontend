@@ -3,12 +3,28 @@ import './studyabroad.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import CollectionIMG from '../../assets/images/topcollection/college1.jpg'
 
 import { Autoplay, Navigation, A11y } from 'swiper/modules';
 import 'swiper/css';
 
 import 'swiper/css/navigation';
 import StudyAbroadCard from './StudyAbroadCard';
+
+import Aus from '../../assets/images/Study-abroad/study-aus.png'
+import Canada from '../../assets/images/Study-abroad/study-canada.png'
+import France from '../../assets/images/Study-abroad/study-france.png'
+import Germany from '../../assets/images/Study-abroad/study-germany.png'
+import hongKong from '../../assets/images/Study-abroad/study-hongkong.png'
+import Ireland from '../../assets/images/Study-abroad/study-ireland.png'
+import Malaysia from '../../assets/images/Study-abroad/study-malaysia.png'
+import Netherlands from '../../assets/images/Study-abroad/study-netherlands.png'
+import NZ from '../../assets/images/Study-abroad/study-nz.png'
+import Singapore from '../../assets/images/Study-abroad/study-singapore.png'
+import Sweden from '../../assets/images/Study-abroad/study-sweden.png'
+import UAE from '../../assets/images/Study-abroad/study-uae.png'
+import UK from '../../assets/images/Study-abroad/study-uk.png'
+import USA from '../../assets/images/Study-abroad/study-usa.png'
 
 const StudyAbroad = () => {
     return (
@@ -45,7 +61,8 @@ const StudyAbroad = () => {
                 >
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={USA}
+                            college_name="Best B.Tech College in USA"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -60,7 +77,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={UK}
+                            college_name="Best B.Tech College in UK"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -75,7 +93,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={Canada}
+                            college_name="Best B.Tech College in Canada"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -90,7 +109,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={Aus}
+                            college_name="Best B.Tech College in Australia"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -105,7 +125,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>s
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={Germany}
+                            college_name="Best B.Tech College in Germany"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -120,7 +141,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={Ireland}
+                            college_name="Best B.Tech College in Ireland"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -135,7 +157,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={NZ}
+                            college_name="Best B.Tech College in New Zealand"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "
@@ -150,7 +173,8 @@ const StudyAbroad = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <StudyAbroadCard
-                            college_name="Best B.Tech College in India"
+                            imgSrc={Netherlands}
+                            college_name="Best B.Tech College in Netherlands"
                             noofcoolleges="5506"
                             check_no_of_colleges="1100"
                             avg_study_cost="33.12 K "

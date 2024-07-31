@@ -7,6 +7,8 @@ import ContactSVG from '../../../assets/images/contact.svg'
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
+import { RiWhatsappFill } from "react-icons/ri";
+
 
 
 
@@ -152,9 +154,6 @@ const Contact = () => {
                                     <div className="items">
                                         <span> <FaLocationDot />  </span>
                                         <p>
-
-                                            
-                                            
                                             <a href="#map">Siksha HELPLINE Unit-02 Greencity Apartment Chandmari
                                             Near MS College Motihari, East Champaran,
                                             Bihar, 845401</a>
@@ -163,16 +162,21 @@ const Contact = () => {
                                     <div className="items">
                                         <span> <IoCall /> </span>
                                         <p>
-                                            <a href="">+91 123 456 7890</a>
+                                            <a href="tel:+918298262156" target='_blank'>+91 8298262156</a>
+                                        </p>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span> <RiWhatsappFill /> </span>
+                                        <p>
+                                            <a href="https://wa.me/+919205230652" target='_blank'>+91 9205230652</a>
                                         </p>
                                     </div>
 
                                     <div className="items">
                                         <span> <IoIosMail /> </span>
                                         <p>
-                                            <a href="">contact@sikshahelpline.com</a>
+                                            <a href="mailto:contact@sikshahelpline.com">contact@sikshahelpline.com</a>
                                         </p>
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
                         </div>

@@ -18,7 +18,7 @@
     /* border: 1px solid red; */
     z-index: 1 !important;
     margin-left: -20px !important;
-    background: linear-gradient(#00000083 60%, #00000073);
+    background: linear-gradient(rgba(61,82,160, 0.60) 60%, rgba(61,82,160, 0.30));
 }
 .info_btn {
     /* border: 1px solid red;    */

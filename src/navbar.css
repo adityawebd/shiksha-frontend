@@ -33,7 +33,7 @@
 
 .navbar-brand img {
     width: 70px !important;
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 .navbar ul li {
@@ -742,9 +742,11 @@
     .navbar ul li {
         margin: 0 10px;
     }
+    .navbar ul li a {
+        font-size: 10px;
+    }
 
     .nav_btns {
-        /* border: 1px solid red; */
         display: none;
     }
 }

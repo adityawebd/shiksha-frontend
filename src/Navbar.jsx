@@ -10,6 +10,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 import { IoMdNotifications } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { FaGraduationCap } from "react-icons/fa6";
@@ -131,7 +132,7 @@ const Navbar = () => {
     }, [modalIsOpen]);
 
     return (
-        // <nav class={color ? 'navbar navbar-expand-lg navbar_fixed navbar_dark' : 'navbar_fixed navbar_dark'}>
+        // <nav className={color ? 'navbar navbar-expand-lg navbar_fixed navbar_dark' : 'navbar_fixed navbar_dark'}>
         <nav className={`navbar navbar-expand-lg  ${scrolled ? 'navbar_fixed navbar_dark' : ''}`}>
             {/* <a className={`navbar-brand ${scrolled ? DarkLOGO : LOGO} `} href="#"> */}
             <NavLink className={`navbar-brand`} to="/">
@@ -156,8 +157,8 @@ const Navbar = () => {
                                         style={{ color: activeItem === 'item1' ? '#fff' : '', background: activeItem === 'item1' ? '#3D52A0' : '' }}>Home</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" to="#" onClick={() => handleItemClick('item2')}
-                                        style={{ color: activeItem === 'item2' ? '#fff' : '', background: activeItem === 'item2' ? '#3D52A0' : '' }}>Services</NavLink>
+                                    <NavLink className="nav-link" to="/siksha-helpline" onClick={() => handleItemClick('item2')}
+                                        style={{ color: activeItem === 'item2' ? '#fff' : '', background: activeItem === 'item2' ? '#3D52A0' : '' }}>Siksha Help.</NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/about-us" onClick={() => handleItemClick('item3')}
@@ -169,13 +170,13 @@ const Navbar = () => {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <NavLink className="nav-link" onClick={() => handleItemClick('item5')}
-                                        style={{ color: activeItem === 'item5' ? '#fff' : '', background: activeItem === 'item5' ? '#3D52A0' : '' }}>Pages</NavLink>
-                                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                                        <li class="dropdown_item-1"><a href="">Page 1</a></li>
-                                        <li class="dropdown_item-2"><a href="">Page 2</a></li>
-                                        <li class="dropdown_item-3"><a href="">Page 3</a></li>
-                                        <li class="dropdown_item-4"><a href="">Page 4</a></li>
-                                        <li class="dropdown_item-5"><a href="">Page 5</a></li>
+                                        style={{ color: activeItem === 'item5' ? '#fff' : '', background: activeItem === 'item5' ? '#3D52A0' : '' }}>Colleges</NavLink>
+                                    <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6">
+                                        <li className="dropdown_item-1"><a href="http://localhost:3000/collegepage/IIT Delhi (IIT-D)">IIT Delhi</a></li>
+                                        <li className="dropdown_item-2"><a href="http://localhost:3000/collegepage/IIT Kharagpur (IIT-KGP)">IIT Kharagpur</a></li>
+                                        <li className="dropdown_item-3"><a href="http://localhost:3000/collegepage/IIT Madras (IIT-M)">IIT Madras</a></li>
+                                        <li className="dropdown_item-4"><a href="http://localhost:3000/collegepage/IIT Roorkee (IIT-R)">IIT Roorkee</a></li>
+                                        <li className="dropdown_item-5"><a href="http://localhost:3000/collegepage/IIT Bombay (IIT-B)">IIT Bombay</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -184,16 +185,19 @@ const Navbar = () => {
 
                 <div className="social_media_links ms-auto">
                     <div className="icon_div">
-                        <FaTwitter style={IconStyling} />
+                        <a href="https://www.facebook.com/profile.php?id=61550767657757&mibextid=LQQJ4d" target='_blank'><FaFacebookF /></a>
                     </div>
                     <div className="icon_div">
-                        <FaFacebookF style={IconStyling} />
+                        <a href="https://www.linkedin.com/company/siksha-helpline/" target='_blank'><FaLinkedinIn /></a> 
                     </div>
                     <div className="icon_div">
-                        <FaLinkedinIn style={IconStyling} />
+                        <a href="https://www.instagram.com/siksha_helpline?igsh=MWU3ZXIwbXZzOXhndg==" target='_blank'><FaInstagram /></a>
                     </div>
                     <div className="icon_div">
-                        <FaInstagram style={IconStyling} />
+                        <a href="https://x.com/Siksha_Helpline?t=trstRpmhjj-gQEetDt9O6w&s=09" target='_blank'><FaTwitter /></a>
+                    </div>
+                    <div className="icon_div">
+                        <a href="https://www.youtube.com/@Siksha_Helpline" target='_blank'><FaYoutube /></a>
                     </div>
                     <div className="noti">
                         <button className="notification_icons" onClick={openModal}>

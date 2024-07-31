@@ -6,8 +6,12 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
+
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
   return (
     <footer>
         <div className="footer_wrapper py-5">
@@ -15,16 +19,16 @@ const Footer = () => {
                     <div className="col-md-4">
                         <div className="row">
                             <div className="col-md-6 col-sm-6 col-6">
-                                <a href="/"><img src={FooterBrand} alt="footer-logo" /></a>
-                                <p>Founded in 2019, Siksha Helpline stands as India's most trusted educational consultancy firm. Our mission is to illuminate the path to higher education with transparency and personalized support.</p>
+                                <a href="/" className='footer_logo'><img src={FooterBrand} alt="footer-logo" /></a>
+                                <p>Siksha Helpline stands as India's most trusted educational consultancy firm. Our mission is to illuminate the path to higher education with transparency and personalized support.</p>
                             </div>
                             <div className="col-md-6 col-sm-6 col-6">
-                                <h6>Quick Links</h6>
+                                <h6>Top Colleges</h6>
                                 <ul>
-                                    <li><a href="/contact-us">Contact Us</a></li>
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                                    <li><a href="/t&c">Terms & Conditions</a></li>
+                                    <li><a href="http://localhost:3000/collegepage/IIT Madras (IIT-M)">IIT Madras</a></li>
+                                    <li><a href="http://localhost:3000/collegepage/IIT Kharagpur (IIT-KGP)">IIT Kharagpur</a></li>
+                                    <li><a href="http://localhost:3000/collegepage/IIT Roorkee (IIT-R)">IIT Roorkee</a></li>
+                                    <li><a href="http://localhost:3000/collegepage/IIT Bombay (IIT-B)">IIT Bombay</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -34,19 +38,19 @@ const Footer = () => {
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Top Universities</h6>
                                 <ul>
-                                    <li><a href="">University 1</a></li>
-                                    <li><a href="">University 2</a></li>
-                                    <li><a href="">University 3</a></li>
-                                    <li><a href="">University 4</a></li>
+                                    <li><a href="">Engineering</a></li>
+                                    <li><a href="">Law</a></li>
+                                    <li><a href="">Management</a></li>
+                                    <li><a href="">Medical</a></li>
                                 </ul>
                             </div>
                             <div className="col-md-6 col-sm-6 col-6">
-                                <h6>Top Colleges</h6>
+                                <h6>Board Exams</h6>
                                 <ul>
-                                    <li><a href="">College 1</a></li>
-                                    <li><a href="">College 2</a></li>
-                                    <li><a href="">College 3</a></li>
-                                    <li><a href="">College 4</a></li>
+                                    <li><a href="">CBSE Class 10th</a></li>
+                                    <li><a href="">NCERT Solutions Class 10th Maths</a></li>
+                                    <li><a href="">CBSE Class 12th</a></li>
+                                    <li><a href="">NCERT Solutions Class 12th Physics</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -56,19 +60,19 @@ const Footer = () => {
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Top Exams</h6>
                                 <ul>
-                                    <li><a href="">Exam 1</a></li>
-                                    <li><a href="">Exam 2</a></li>
-                                    <li><a href="">Exam 3</a></li>
-                                    <li><a href="">Exam 4</a></li>
+                                    <li><a href="">CAT</a></li>
+                                    <li><a href="">GATE</a></li>
+                                    <li><a href="">NEET</a></li>
+                                    <li><a href="">JEE MAIN</a></li>
                                 </ul>
                             </div>
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Top Study Abroad Places</h6>
                                 <ul>
-                                    <li><a href="">Place 1</a></li>
-                                    <li><a href="">Place 2</a></li>
-                                    <li><a href="">Place 3</a></li>
-                                    <li><a href="">Place 4</a></li>
+                                    <li><a href="">Canada</a></li>
+                                    <li><a href="">USA</a></li>
+                                    <li><a href="">New Zealand</a></li>
+                                    <li><a href="">Singapore</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,21 +81,21 @@ const Footer = () => {
             <div className="footer_footer mt-5">
                 <div className="footer_buttons">
                     <ul className='d-flex justify-content-center align-items-center'>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                        <li><a href="">Link 4</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/contact-us">Contact Us</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/t&c">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div className="footer_social_media_links d-flex flex-column justify-content-center align-items-start">
                     <div className="icons d-flex flex-row justify-content-center align-items-start">
-                        <span><a href=""><FaFacebookF /></a></span>
-                        <span><a href=""><FaLinkedinIn /></a></span>
-                        <span><a href=""><FaInstagram /></a></span>
-                        <span><a href=""><FaTwitter /></a></span>
+                        <span><a href="https://www.facebook.com/profile.php?id=61550767657757&mibextid=LQQJ4d" target='_blank'><FaFacebookF /></a></span>
+                        <span><a href="https://www.linkedin.com/company/siksha-helpline/" target='_blank'><FaLinkedinIn /></a></span>
+                        <span><a href="https://www.instagram.com/siksha_helpline?igsh=MWU3ZXIwbXZzOXhndg==" target='_blank'><FaInstagram /></a></span>
+                        <span><a href="https://x.com/Siksha_Helpline?t=trstRpmhjj-gQEetDt9O6w&s=09" target='_blank'><FaTwitter /></a></span>
+                        <span><a href="https://www.youtube.com/@Siksha_Helpline" target='_blank'><FaYoutube /></a></span>
                     </div>
-                    <div className="copyright">&copy; 2024 Siksha-Helpline</div>
-                    <div className="copyright">&copy; 2024 Siksha Helpline</div>
+                    <div className="copyright">&copy; {currentYear} Siksha-Helpline</div>
                 </div>
             </div>
         </div>
