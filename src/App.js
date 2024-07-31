@@ -3,7 +3,7 @@ import './App.css';
 import './assets/css/global.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/Herosection/HeroSection';
-
+// require('dotenv').config();
 import 'bootstrap/dist/css/bootstrap.css'
 // import Navbar from './Navbar';
 import SetYourGoal from './components/SetYourGoal/SetYourGoal';
