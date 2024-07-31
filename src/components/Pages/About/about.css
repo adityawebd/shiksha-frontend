@@ -117,6 +117,7 @@
 
 .about_long_way {
     background-color: var(--white-clr);
+    /* border: 1px solid red; */
 }
 
 .about_long_way .about_long_way_wrapper {
