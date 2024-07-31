@@ -39,7 +39,8 @@ const CollegePage = () => {
   useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:5000/api/collegelist/`+collegeName)
+            const response = await axios.get(`http://127.0.0.1:5000/api/collegelist/`+collegeName) //localhost
+            // const response = await axios.get(`http://127.0.0.1:5000/api/collegelist/`+collegeName) //server
             setData(response.data)
 
         }
