@@ -8,7 +8,7 @@ import College3 from '../../assets/images/topcollection/collegelogo3.webp'
 const TopCollectionCard = (props) => {
   return (
     <div className='img_wrapper'>
-        <img className='img_wrapper_bg' src={CollectionIMG} alt='top-collection-img' />
+        <img className='img_wrapper_bg' src={props.image} alt='top-collection-img' />
         {/* <div className="overlay1"></div> */}
         <div className="img_wrapper_container">
             <div className="img_wrapper_body">

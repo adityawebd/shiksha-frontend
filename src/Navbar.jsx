@@ -1,7 +1,7 @@
 'use client'
 import { React, useState, useEffect } from 'react'
-import LOGO from './assets/logo.png'
-import DarkLOGO from './assets/RDG POST (28).png'
+import LOGO from './assets/logo-white-box.png'
+import DarkLOGO from './assets/logo-white-box.png'
 import './navbar.css'
 import { NavLink } from 'react-router-dom';
 

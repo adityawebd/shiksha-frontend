@@ -38,10 +38,10 @@ const About = () => {
                             <h3>Vision</h3>
                             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque similique illum soluta enim dolore nostrum at, alias quibusdam minus quisquam molestias libero a quasi blanditiis deleniti! Atque explicabo aliquid, mollitia blanditiis provident amet, rerum quae perferendis voluptates quasi vero? Corporis.</p> */}
                         </div>
-                        <div data-aos="fade-up" className="Siksha-helpline">
+                        <div data-aos="fade-up" className="Siksha-helpline text-center">
                             <h2>Siksha Helpline</h2>
                             <p>Founded in 2019, Siksha Helpline stands as India's most trusted educational consultancy firm. Our mission is to illuminate the path to higher education with transparency and personalized support.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos totam et in odit ipsum est tempora sint error temporibus blanditiis, reiciendis vel rerum distinctio aut necessitatibus enim numquam iure, omnis dolorum. Placeat, rem ullam doloremque cumque, error, alias quaerat sint deserunt cum voluptas incidunt amet veniam quasi accusantium sit?</p>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos totam et in odit ipsum est tempora sint error temporibus blanditiis, reiciendis vel rerum distinctio aut necessitatibus enim numquam iure, omnis dolorum. Placeat, rem ullam doloremque cumque, error, alias quaerat sint deserunt cum voluptas incidunt amet veniam quasi accusantium sit?</p> */}
                         </div>
                         <div data-aos="fade-up-left" className="m_s_div mission">
                             <figure>
@@ -104,23 +104,23 @@ const About = () => {
                                 <div className="container about_long_way_wrapper mt-4">
                                     <div className="long_way_card">
                                         <LiaUniversitySolid size={60} />
-                                        <div className="no_of_colleges  mt-3">18,000+</div>
+                                        <div className="no_of_colleges  mt-3">25000+</div>
                                         <div className="title">COLLEGES</div>
                                     </div>
                                     <div className="long_way_card">
                                         <FaBookOpenReader size={60} />
-                                        <div className="no_of_colleges  mt-3">420</div>
+                                        <div className="no_of_colleges  mt-3">1000+</div>
                                         <div className="title">EXAMS</div>
                                     </div>
                                     <div className="long_way_card">
                                         <IoIosPeople size={60} />
-                                        <div className="no_of_colleges  mt-3">1,00,000+</div>
-                                        <div className="title">MONTHLY VISITS</div>
+                                        <div className="no_of_colleges  mt-3">happy visit</div>
+                                        {/* <div className="title">MONTHLY VISITS</div> */}
                                     </div>
                                     <div className="long_way_card">
                                         <GiCoffeeCup size={60} />
-                                        <div className="no_of_colleges  mt-3">3,00,000+</div>
-                                        <div className="title">COFFEE/TEA CONSUMED</div>
+                                        <div className="no_of_colleges  mt-3">Let's have COFFEE</div>
+                                        <div className="title">and discuss</div>
                                     </div>
                                 </div>
                             </div>
