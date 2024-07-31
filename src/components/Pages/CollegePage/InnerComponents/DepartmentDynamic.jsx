@@ -34,7 +34,8 @@ const DepartmentDynamic = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/department/${collegeName}`)
+                const srver = process.env.REACT_APP_SERVER;
+                const response = await axios.get(`${srver}:5000/api/department/${collegeName}`)
                 stDepartment(response.data)
 
             }

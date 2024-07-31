@@ -27,6 +27,7 @@ import CollegeCompare from './InnerComponents/CollegeCompare.jsx'
 import axios from 'axios';
 
 const CollegePage = () => {
+  
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [data, setData] = useState([]);
   const { collegeName } = useParams();
@@ -39,7 +40,10 @@ const CollegePage = () => {
   useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:5000/api/collegelist/`+collegeName)
+          
+            const srver = process.env.REACT_APP_SERVER;
+            const response = await axios.get(`${srver}:5000/api/collegelist/`+collegeName) //localhost
+            
             setData(response.data)
 
         }
