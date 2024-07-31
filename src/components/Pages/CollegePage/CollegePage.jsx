@@ -1,19 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import './collegepage.css'
 import Navbar from '../../../Navbar'
 // import Footer from '../../Footer/Footer.jsx'
 import { useParams, Link } from 'react-router-dom';
-
 import { NavLink } from 'react-router-dom'
 import collegeLOGO from '../../../assets/images/college_imgs/college_logo.webp'
 import { FaStar } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
-
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
-
 import CollegeIMG from '../../../assets/images/college_imgs.jpg' //college img
-
 import Info from './InnerComponents/Info.jsx'
 import Courses from './InnerComponents/Courses.jsx'
 import Admission from './InnerComponents/Admission.jsx'
@@ -28,41 +24,63 @@ import Faculty from './InnerComponents/Faculty.jsx'
 import NewsArticles from './InnerComponents/NewsArticles.jsx'
 import Hostel from './InnerComponents/Hostel.jsx'
 import CollegeCompare from './InnerComponents/CollegeCompare.jsx'
+import axios from 'axios';
 
 const CollegePage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [data, setData] = useState([]);
   const { collegeName } = useParams();
+ 
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
   
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(`http://127.0.0.1:5000/api/collegelist/`+collegeName)
+            setData(response.data)
+
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
+    fetchData()
+}, []);
+
+
+console.log("data for upper navifation",data)
   return (
+
     <div className='college_page_responsive'>
+      
         <section className="collegepage_section">
           <figure className='college_img'>
             <img src={CollegeIMG} alt="" />
           </figure>
           <Navbar />
 
-          <div className="collegepage_section_wrapper">
+          {data.map((data,index) =>(
+          <div className="collegepage_section_wrapper" key={index}>
             <div className="collegepage_section_about">
               {/* ----- left div ---- */}
               <div className="college_about_body">
                 <div className="college_about_body_head">
-                  <img src={collegeLOGO} alt="college-logo" />
+                  <img src={data.collageIcon[data.collageIcon.length-1]} alt="college-logo" />
                   <div className="body">
-                    <h4>IIT Kharagpur {collegeName} (IIT-KGP):</h4>
-                    <h5>Admission 2024, Courses, Fees, Cutoff, Placements</h5>
+                    <h4> {collegeName}</h4>
+                    <h5>{data.shortDiscription}</h5>
                     <div className="body_points">
-                      <p>Kharagpur, West Bengal</p>
+                      <p>{data.shortAddress}</p>
                       <p>
                         <span><FaRegNewspaper /></span>
-                        Autonomous University
+                        {data.universitytype}
                       </p>
                       <p>
                         <span><FaCalendarAlt /></span>
-                        Estd 1951
+                        {data.Estd}
                       </p>
                     </div>
                   </div>
@@ -72,7 +90,7 @@ const CollegePage = () => {
               {/* ----- right div ---- */}
               <div className="college_about_footer">
                 <div className="rating">
-                  <h2 className="number">4.4</h2>
+                  <h2 className="number">{data.rating}</h2>
                   <div className="reviews">
                     <div className="star_box">
                       <span><FaStar /></span>
@@ -108,6 +126,8 @@ const CollegePage = () => {
               </div>
             </div>
           </div>
+          ))}
+
         </section>
         
 

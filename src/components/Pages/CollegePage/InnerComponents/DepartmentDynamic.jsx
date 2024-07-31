@@ -29,19 +29,12 @@ const DepartmentDynamic = () => {
         }));
     };
 
-    // const fixedData = [
-    //     {
-    //         id: 1,
-    //         page_title: "IIT Kharagpur, Deparments",
-    //         answered_ques_title: "IIT Kharagpur: 309 Answered Questions",
-    //         view_all_link: "",
-    //     }
-    // ]
+    
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/department/:${collegeName}`)
+                const response = await axios.get(`http://localhost:5000/api/department/${collegeName}`)
                 stDepartment(response.data)
 
             }
