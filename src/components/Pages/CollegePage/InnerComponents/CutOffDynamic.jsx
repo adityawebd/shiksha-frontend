@@ -22,7 +22,7 @@ const CutOffDynamic = () => {
 
             table_content_title_3: "IIT Kharagpur Cutoff 2023: Top IITs Cutoff Trends",
             table_content_para_3: "All the IITs allow BTech admission via JoSAA counselling. The table below shows the BTech CSE cutoff trend of the JoSAA cutoff of top IITs for the round 6 general category:",
-            
+
             table_content_title_4: "IIT Kharagpur JEE Advanced Cutoff 2023: Round 1 & Round 6 Comparison",
             table_content_para_4: "IIT Madras BTech cutoff varies each round. As per the cutoff released by the JoSAA, IIT Madras BTech CSE round 1 closing cutoff remained at 144 and the round 6 cutoff closed at 148 ranks. As compared to the round 1 cutoff, the round 6 cutoff score was declined by 4 ranks. Given below is the comparison for such other courses, candidates can refer to the table:",
 
@@ -268,13 +268,13 @@ const CutOffDynamic = () => {
                             <h6>Table of Content</h6>
 
                             <ol typeof='1'>
-                                    {
-                                        tableOfContents.map((row) => (
-                                            <li key={row.id}> 
-                                                <a href={row.link}> {row.title} </a>
-                                            </li>
-                                        ))
-                                    }
+                                {
+                                    tableOfContents.map((row) => (
+                                        <li key={row.id}>
+                                            <a href={row.link}> {row.title} </a>
+                                        </li>
+                                    ))
+                                }
                             </ol>
                         </div>
 

@@ -1,13 +1,24 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
+const transformCollegeName = (name) => {
+  const match = name.match(/^(.*?) - .*? - \[(.*?)\]$/);
+  if (match) {
+    const [ , collegeName, abbreviation ] = match;
+    return `${collegeName} (${abbreviation.replace(/-/g, '')})`;
+  }
+  return name; // return original name if it doesn't match the expected format
+}
+
 const Top10CollegeCard = (props) => {
+  const transformedCollegeName = transformCollegeName(props.college_name);
   return (
     <div data-aos="fade-up" className="top10college_card">
       <div data-aos="fade-up" className="ranking">
         <span>{props.ranking}</span>
       </div>
-      <NavLink to={`/collegepage/${props.college_name}`} data-aos="fade-up" className="card_body">
+      <NavLink to={`/collegepage/${transformedCollegeName}`} data-aos="fade-up" className="card_body">
         <ul>
           <li data-aos="fade-up">College</li>
           <li data-aos="fade-up">Cut Off</li>
