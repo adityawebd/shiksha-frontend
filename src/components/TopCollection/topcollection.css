@@ -47,6 +47,7 @@
 
 .img_wrapper_body {
     /* border: 1px solid red; */
+    background-color: rgba(61, 82, 160, 0.60);
     /* display: none; */
 
     width: 100%;

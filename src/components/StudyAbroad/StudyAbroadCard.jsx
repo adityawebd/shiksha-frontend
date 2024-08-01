@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './studyabroad.css'
 import { NavLink } from 'react-router-dom'
 
-import CollectionIMG from '../../assets/images/topcollection/college1.jpg'
 import College1 from '../../assets/images/topcollection/collegelogo1.webp'
 import College2 from '../../assets/images/topcollection/collegelogo2.gif'
 import College3 from '../../assets/images/topcollection/collegelogo3.webp'
@@ -25,7 +24,7 @@ const StudyAbroadCard = (props) => {
 
   return (
     <div className='img_wrapper'>
-        <img className='img_wrapper_bg' src={CollectionIMG} alt='top-collection-img' />
+        <img className='img_wrapper_bg' src={props.imgSrc} alt='top-collection-img' />
         <div className="img_wrapper_container">
             <div className={`img_wrapper_body study_abroad_body ${showBackContainer ? 'hide-body' : ''}`}>
                 <h5 data-aos="zoom-in">{props.college_name}</h5>

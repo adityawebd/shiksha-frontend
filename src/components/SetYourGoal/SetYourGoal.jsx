@@ -52,7 +52,8 @@ const SetYourGoal = () => {
     spaceBetween: isMobile ? 10 : 30,
     slidesPerGroup: 1,
     loop: true,
-    loopFillGroupWithBlank: true,
+    loopfillgroupwithblank: "true",
+    // loopfillgroupwithblank={value.toString()}
     pagination: {
       el: '.swiper-pagination',
       clickable: true

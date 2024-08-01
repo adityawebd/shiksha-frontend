@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './about.css'
 import AOS from 'aos';
 import Navbar from '../../../Navbar'
- 
+
 import missionIMG from '../../../assets/images/mission.svg'
 import visionIMG from '../../../assets/images/vision.svg'
 import StudentIMG from '../../../assets/images/about/students.svg'
@@ -31,29 +31,32 @@ const About = () => {
                     </div>
 
                     <div className="mission_vision py-5">
-                        <div data-aos="fade-up-right" className="m_s_div vision">
+                        <div className="m_s_div vision">
                             <figure>
                                 <img src={visionIMG} alt="" />
                             </figure>
                             <h3>Vision</h3>
+                            <p>We envision a world where all parents, teachers, and students have access to the tools and support they need to reach their greatest potential. We will make it happen by being the premier provider of educational support and guidance. We see a day where obstacles to education are removed, lifelong learning is valued, and everyone has the capacity to succeed academically and personally.</p>
                             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque similique illum soluta enim dolore nostrum at, alias quibusdam minus quisquam molestias libero a quasi blanditiis deleniti! Atque explicabo aliquid, mollitia blanditiis provident amet, rerum quae perferendis voluptates quasi vero? Corporis.</p> */}
                         </div>
-                        <div data-aos="fade-up" className="Siksha-helpline text-center">
-                            <h2>Siksha Helpline</h2>
-                            <p>Founded in 2019, Siksha Helpline stands as India's most trusted educational consultancy firm. Our mission is to illuminate the path to higher education with transparency and personalized support.</p>
+                        <div className="siksha_helpline text-center">
+                            <h2>Welcome to Siksha Helpline</h2>
+                            <p>Siksha Helpline is one of the most reputable educational consulting companies in India. Our goal is to provide clear, individualized guidance on the path to higher education. The Shiksha Helpline offers professional advice and tools to assist you in understanding the complexity of the educational system, whether you're looking for aid with exam preparation, career counseling, school admissions, or academic planning. Our qualified experts give you individualized support, address your inquiries, and offer insightful advice to help you reach your learning objectives and make wise decisions. For everything related to education, the Shiksha Helpline is your go-to source because of its emphasis on empowerment, clarity, and assistance.</p>
                             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos totam et in odit ipsum est tempora sint error temporibus blanditiis, reiciendis vel rerum distinctio aut necessitatibus enim numquam iure, omnis dolorum. Placeat, rem ullam doloremque cumque, error, alias quaerat sint deserunt cum voluptas incidunt amet veniam quasi accusantium sit?</p> */}
                         </div>
-                        <div data-aos="fade-up-left" className="m_s_div mission">
+                        <div className="m_s_div mission">
                             <figure>
                                 <img src={missionIMG} alt="" />
                             </figure>
                             <h3>Mission</h3>
+                            <p>Our mission is to empower students by providing them with a convenient, trustworthy, and comprehensive source of educational support through our helpline. Our dedication is to establish a friendly and engaging learning environment, offer informed guidance, remove educational barriers, and promote lifelong learning. Our goal is to create pathways for academic success and enhance learning outcomes by offering compassionate and customized help.
+                            </p>
                             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque similique illum soluta enim dolore nostrum at, alias quibusdam minus quisquam molestias libero a quasi blanditiis deleniti! Atque explicabo aliquid, mollitia blanditiis provident amet, rerum quae perferendis voluptates quasi vero? Corporis.</p> */}
                         </div>
                     </div>
                 </div>
 
-                <div className="bg_reddish">
+                {/* <div className="bg_reddish">
                     <div className="container about_for">
                         <div className="aobut_for_wrapper gap-4">
                             <div data-aos="zoom-in-right" className="about_for_card bg-white p-4 d-flex flex-column justify-content-center align-items-center text-center">
@@ -76,85 +79,52 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="about_long_way py-4 my-5">
                     <h3 data-aos="fade-up" className='text-center'>Our Milestones</h3>
                     <div className="container about_long_way_wrapper mt-4">
                         <div className="long_way_card">
-                            <span><LiaUniversitySolid size={60} /></span>
-                            {/* <div className="no_of_colleges">20,000+</div> */}
-                            {/* <div className="title">COLLEGES</div> */}
+                            <LiaUniversitySolid size={60} />
+                            <div className="no_of_colleges  mt-3">25000+</div>
+                            <div className="title">COLLEGES</div>
                         </div>
                         <div className="long_way_card">
-                            <span><FaBookReader size={60} /></span>
-                            {/* <div className="no_of_colleges">180+</div> */}
-                            {/* <div className="title">EXAMS</div> */}
+                            <FaBookOpenReader size={60} />
+                            <div className="no_of_colleges  mt-3">1000+</div>
+                            <div className="title">EXAMS</div>
                         </div>
                         <div className="long_way_card">
-                            <span><IoIosPeople size={60} /></span>
-                            {/* <div className="no_of_colleges">10,00,000+</div> */}
+                            <IoIosPeople size={60} />
+                            <div className="no_of_colleges  mt-3">happy visit</div>
                             {/* <div className="title">MONTHLY VISITS</div> */}
                         </div>
                         <div className="long_way_card">
-                            <span><FaMugHot size={60} /></span>
-                            {/* <div className="no_of_colleges">1,50,000+</div> */}
-                            {/* <div className="title">TEA/COFFEE CONSUMED</div> */}
-                            <div className="bg_reddish about_long_way py-4">
-                                <h3 data-aos="fade-up" className='text-center'>Our Milestones</h3>
-                                <div className="container about_long_way_wrapper mt-4">
-                                    <div className="long_way_card">
-                                        <LiaUniversitySolid size={60} />
-                                        <div className="no_of_colleges  mt-3">25000+</div>
-                                        <div className="title">COLLEGES</div>
-                                    </div>
-                                    <div className="long_way_card">
-                                        <FaBookOpenReader size={60} />
-                                        <div className="no_of_colleges  mt-3">1000+</div>
-                                        <div className="title">EXAMS</div>
-                                    </div>
-                                    <div className="long_way_card">
-                                        <IoIosPeople size={60} />
-                                        <div className="no_of_colleges  mt-3">happy visit</div>
-                                        {/* <div className="title">MONTHLY VISITS</div> */}
-                                    </div>
-                                    <div className="long_way_card">
-                                        <GiCoffeeCup size={60} />
-                                        <div className="no_of_colleges  mt-3">Let's have COFFEE</div>
-                                        <div className="title">and discuss</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="team_img">
-                                <h3 data-aos="fade-up">Why Choose Siksha Helpline?</h3>
-                                <p data-aos="fade-up">Thousands of students trust Siksha Helpline for our commitment to clarity and personalized service. Our success stories are testament to our dedication.</p>
-                                <h3 data-aos="fade-up">Meet Our Team!</h3>
-                                <p data-aos="fade-up">From athletes to musicians and philosophers — we're a pretty lively bunch here at Siksha-Helpline!</p>
-                            </div>
+                            <GiCoffeeCup size={60} />
+                            <div className="no_of_colleges  mt-3">Let's have COFFEE</div>
+                            <div className="title">and discuss</div>
+                        </div>
+                    </div>
 
-                            <div className="bg_reddish about_advertise py-5">
-                                <div className="container">
-                                    <h3 data-aos="fade-up">Let Us Guide Your Admission Journey</h3>
-                                    <p data-aos="fade-up">Whether you're applying for undergraduate or postgraduate programs, Siksha Helpline ensures you're informed and prepared for success.</p>
-                                    <h3 data-aos="fade-up">Advertise With Us</h3>
-                                    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nobis vel exercitationem libero maiores similique deserunt et reiciendis architecto porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, minus explicabo! Minima provident ullam labore hic exercitationem culpa sapiente consequuntur.</p>
+                    <div className="team_img">
+                        <h3 data-aos="fade-up">Why Choose Siksha Helpline?</h3>
+                        <p data-aos="fade-up">Thousands of students trust Siksha Helpline for our commitment to clarity and personalized service. Our success stories are testament to our dedication.</p>
+                    </div>
+                    {/* 
+                    <div className="bg_reddish about_advertise py-5">
+                        <div className="container">
+                            <h3 data-aos="fade-up">Let Us Guide Your Admission Journey</h3>
+                            <p data-aos="fade-up">Whether you're applying for undergraduate or postgraduate programs, Siksha Helpline ensures you're informed and prepared for success.</p>
+                        </div>
+                    </div> */}
 
-                                    <a data-aos="fade-up" href="">Mail Us</a>
-                                </div>
-                            </div>
+                    <div className="bg_reddish about_advertise py-5">
+                        <div className="container">
+                            <h3 data-aos="fade-up">Contact With Us</h3>
+                            <p data-aos="fade-up">"Ready to embark on your educational journey? Contact Siksha Helpline today for personalized admission guidance.
 
-                            <div className="bg_reddish about_advertise py-5">
-                                <div className="container">
-                                    <h3 data-aos="fade-up">Contact With Us</h3>
-                                    <p data-aos="fade-up">"Ready to embark on your educational journey? Contact Siksha Helpline today for personalized admission guidance.
+                                Enhance the webpage with visuals that highlight the journey from admission confusion to clarity and success."</p>
 
-                                        Enhance the webpage with visuals that highlight the journey from admission confusion to clarity and success."</p>
-
-                                    <a data-aos="fade-up" href="/contact-us">Contact Us</a>
-                                </div>
-                            </div>
-
-
-
+                            <a data-aos="fade-up" href="/contact-us">Contact Us</a>
                         </div>
                     </div>
                 </div>

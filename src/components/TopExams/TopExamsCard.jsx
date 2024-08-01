@@ -1,22 +1,22 @@
 import React from 'react'
 
-import ExamCardBg from '../../assets/images/TopExam/neet.jpeg'
+import ExamCardBg from '../../assets/images/TopExam/neet.jpeg'  
 import ExamLogo from '../../assets/images/TopExam/neet-logo.webp'
 
 const TopExamsCard = (props) => {
   return (
     <div className='img_wrapper topexam_card'>
-        <article class="card">
-            <header class="card__thumb">
+        <article className="card">
+            <header className="card__thumb">
                 <a href="#">
-                    <img src={ExamCardBg} alt='' />
+                    <img src={props.imgSrc} alt='exam-image' />
                 </a>
             </header>
-            <date class="card__date">
-                <img src={ExamLogo} alt="" />
-            </date>
-            <div class="card__body">
-                <div class="card__category"><a href="#">{props.organization}</a></div>
+            <div className="card__date">
+                <img src={props.examLogo} alt="exam-logo" />
+            </div>
+            <div className="card__body">
+                <div className="card__category"><a href="#">{props.organization}</a></div>
                 <ul>
                     <li>
                         <div className="right_side">Participating Colleges</div>

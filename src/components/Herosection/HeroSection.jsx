@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../../Navbar';
-import './herosection.css'
-import { Typewriter } from 'react-simple-typewriter'
-// import '../assets/css/global.css'
+import './herosection.css';
+import { Typewriter } from 'react-simple-typewriter';
 import { NavLink } from 'react-router-dom';
-
 import { FaSearch } from "react-icons/fa";
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import HeroBG from  '../../assets/videos/college1-crop.mp4'
+import HeroBG from '../../assets/videos/college1-crop.mp4';
 import SetYourGoal from '../SetYourGoal/SetYourGoal';
 import TopCollection from '../TopCollection/TopCollection';
 import CollegeRecommendations from '../CollegeRecommendations/CollegeRecommendations';
@@ -20,19 +18,44 @@ import StudyAbroad from '../StudyAbroad/StudyAbroad';
 import Testimonials from '../Testimonials/Testimonials';
 
 const HeroSection = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.onloadeddata = () => {
+        setVideoLoaded(true);
+      };
+    }
+  }, []);
+
   return (
     <div>
       <section className="herosection">
-        
-        <video autoPlay loop muted playsInline className="video_bg">
-              <source src={HeroBG} type="video/mp4" />
-        </video>
-        
+        {!videoLoaded && (
+          <div className="video-placeholder">
+            <img src="path_to_low_quality_image.jpg" alt="Loading..." />
+          </div>
+        )}
+        <LazyLoadComponent>
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="video_bg"
+            preload="metadata"
+          >
+            <source src={HeroBG} type="video/mp4" />
+          </video>
+        </LazyLoadComponent>
         <Navbar />
         <div className="herosection_wrapper">
-          <h2><span className='fixed_h'>Find Over</span> {' '} 
+          <h2>
+            <span className='fixed_h'>Find Over</span> {' '}
             <span style={{ color: '#00f1ff', fontWeight: 'bold', marginLeft: '150px' }}>
-              {/* Style will be inherited from the parent element */}
               <Typewriter
                 words={['3500+ Colleges in India', '500+ Exams in India', '1100+ Exams in India', '1 Lakh Reviews in India!']}
                 loop={Infinity}
@@ -41,20 +64,19 @@ const HeroSection = () => {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-          
               />
             </span>
           </h2>
-          
+
           <div className="search_widget">
-              <input type="text" placeholder='Search for Colleges, Exams, Courses, and More...' />
-              <NavLink href=""><FaSearch /></NavLink>
+            <input type="text" placeholder='Search for Colleges, Exams, Courses, and More...' />
+            <NavLink to=""><FaSearch /></NavLink>
           </div>
         </div>
       </section>
       <SetYourGoal />
       <TopCollection />
-      <CollegeRecommendations />  
+      <CollegeRecommendations />
       <Top10Colleges />
       <ExploreStudy />
       <ClassExam />
@@ -63,7 +85,7 @@ const HeroSection = () => {
       <StudyAbroad />
       <Testimonials />
     </div>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

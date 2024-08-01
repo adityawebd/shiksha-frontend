@@ -24,14 +24,22 @@
 .slider_header h5 {
     color: var(--white-clr);
     font-weight: 500;
+    width: 90%;
 }
 .slider_header .news_para {
-    width: 100%;
+    /* border: 1px solid red; */
+    width: 90%;
     color: var(--white-clr);
     background: none;
     padding-left: 0;
     font-size: 14px;
     padding-right: 20px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .slider_body a {

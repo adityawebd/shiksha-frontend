@@ -7,10 +7,9 @@ import Tabs from 'react-bootstrap/Tabs';
 import Top10CollegeCard from './Top10CollegeCard';
 import axios from 'axios';
 
+
+
 const Top10Colleges = () => {
-
-
-
     const [tabData, setTabData] = useState([])
     useEffect(() => {
         const fetchData = async () => {
@@ -27,11 +26,11 @@ const Top10Colleges = () => {
 
     }, []);
 
- 
+
     return (
         <section className="top10colleges pb-5">
             <div className="top10colleges_wrapper container">
-                
+
                 <h2 className='mb-4'>Top 10 Colleges</h2>
 
                 <Tabs defaultActiveKey="BE/B.Tech" id="uncontrolled-tab-example" className="mb-3 tabs">
@@ -51,7 +50,7 @@ const Top10Colleges = () => {
                                 />
                             ))}
                         </Tab>
-                    ))}                    
+                    ))}
 
                 </Tabs>
             </div>
