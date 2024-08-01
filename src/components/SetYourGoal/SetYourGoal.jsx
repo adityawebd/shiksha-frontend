@@ -109,7 +109,7 @@ const SetYourGoal = () => {
     {
       id:"6",
       heading: "Design",
-      degree_name_1: "B.des",
+      degree_name_1: "B.Des",
       image:image6
     },
     {

@@ -37,11 +37,11 @@ const ExploreStudy = () => {
                         <div className="row">
                             <div className="col-md-6 explore_div">
                                 <ExploreStudyCard src={Delhi} name="Delhi" />
-                                <ExploreStudyCard src={Banglore} name="Banglore" />
+                                <ExploreStudyCard src={Banglore} name="Bangalore" />
                             </div>  
                             <div className="col-md-6 explore_div">
                                 <ExploreStudyCard src={Bombay} name="Mumbai" />
-                                <ExploreStudyCard src={WestBengal} name="West bengal" />
+                                <ExploreStudyCard src={WestBengal} name="West Bengal" />
                             </div>
                         </div>
                     </div>
