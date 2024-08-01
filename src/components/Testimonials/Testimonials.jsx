@@ -55,7 +55,7 @@ const Testimonials = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <TestimonialCard
-                                testimonial_body="I’m from a very small town in Bihar, and I never even thought of studying abroad considering my financial conditions, unless I came across the Siksha Helpline and applied to 5 colleges in Australia, and I finally got admission to the University of Melbourne. All thanks to the Siksha Helpline for making my dreams come true."
+                                testimonial_body="I’m from a very small town in Bihar, and I never even thought of studying abroad considering my financial conditions, unless I came across the Siksha Helpline, and with the help of their support, I finally got admission to the University of Melbourne. All thanks to the Siksha Helpline for making my dreams come true."
                                 testimonial_img_link={StudentIMG}
                                 name="Purav Mishra"
                                 about="University of Melbourne (Australia)"
@@ -82,10 +82,28 @@ const Testimonials = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <TestimonialCard
-                                testimonial_body="It was very informative, reliable, and informative. So my overall experience with the Siksha Helpline was great."
+                                testimonial_body="It was very helpful, informative, and reliable. So my overall experience with the Siksha Helpline was great."
                                 testimonial_img_link={StudentIMG}
                                 name="Keshav Logani"
                                 about="Christ University, India"
+                                // sub_about="Testimonial Sub About 6"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <TestimonialCard
+                                testimonial_body="I found the Siksha Helpline to be incredibly user-friendly. Everything was up-to-date and pretty easy to navigate as well."
+                                testimonial_img_link={StudentIMG}
+                                name="Varun Nath"
+                                about="Vivekananda Institute of Professional Studies"
+                                // sub_about="Testimonial Sub About 6"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <TestimonialCard
+                                testimonial_body="Outstanding experience; the well-organized layout made it very easy to understand everything. "
+                                testimonial_img_link={StudentIMG}
+                                name="Roshan Jaiswal"
+                                about="Indus Institute of Technology and Management [IITM]"
                                 // sub_about="Testimonial Sub About 6"
                             />
                         </SwiperSlide>

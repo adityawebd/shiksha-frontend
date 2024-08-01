@@ -18,7 +18,7 @@
 }
 
 .top10colleges_wrapper {
-    /* background: linear-gradient(#0000008b 50%, white 50%); */
+    /* backgroun    : linear-gradient(#0000008b 50%, white 50%); */
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -85,9 +85,14 @@
     width: 290px;
     overflow: hidden;
     border-radius: 30px;
-    background: url(../../assets/images/college_imgs.jpg);
-    background-position: center center;
-    background-size: cover;
+    position: relative;
+}
+.top10college_card img {
+    position: absolute;
+    top: 0;
+    width: 290px;
+    height: 100%;
+    /* z-index: -1; */
 }
 .top10college_card .ranking {
     /* border: 1px solid green; */
