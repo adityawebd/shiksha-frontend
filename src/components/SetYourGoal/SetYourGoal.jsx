@@ -86,8 +86,8 @@ const SetYourGoal = () => {
     {
       id:"3",
       heading: "Commerce",
-      degree_name_1: "B.com",
-      specialization: "M.com",
+      degree_name_1: "B.Com",
+      specialization: "M.Com",
       image:image3
     },
     {
@@ -109,28 +109,28 @@ const SetYourGoal = () => {
     {
       id:"6",
       heading: "Design",
-      degree_name_1: "B.des",
+      degree_name_1: "B.Des",
       image:image6
     },
     {
       id:"7",
       heading: "Science",
-      degree_name_1: "B.sc",
-      specialization: "M.sc",
+      degree_name_1: "B.Sc",
+      specialization: "M.Sc",
       image:image7
     },
     {
       id:"8",
       heading: "Pharmacy",
-      degree_name_1: "B.pharma",
-      specialization: "M.pharma",
+      degree_name_1: "B.Pharma",
+      specialization: "M.Pharma",
       image:image8
     },
     {
       id:"9",
       heading: "Paramedical",
-      degree_name_1: "B.sc(Nursing)",
-      specialization: "M.sc(Nursing)",
+      degree_name_1: "B.Sc(Nursing)",
+      specialization: "M.Sc(Nursing)",
       image:image9
     },
     {
@@ -151,8 +151,8 @@ const SetYourGoal = () => {
     {
       id:"12",
       heading: "Agriculture",
-      degree_name_1: "B.sc (ag)",
-      specialization: "M.sc (Ag)",
+      degree_name_1: "B.Sc (ag)",
+      specialization: "M.Sc (Ag)",
       image:image12
     },
     {

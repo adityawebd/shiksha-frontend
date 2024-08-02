@@ -41,7 +41,7 @@ const About = () => {
                         </div>
                         <div className="siksha_helpline text-center">
                             <h2>Welcome to Siksha Helpline</h2>
-                            <p>Siksha Helpline is one of the most reputable educational consulting companies in India. Our goal is to provide clear, individualized guidance on the path to higher education. The Shiksha Helpline offers professional advice and tools to assist you in understanding the complexity of the educational system, whether you're looking for aid with exam preparation, career counseling, school admissions, or academic planning. Our qualified experts give you individualized support, address your inquiries, and offer insightful advice to help you reach your learning objectives and make wise decisions. For everything related to education, the Shiksha Helpline is your go-to source because of its emphasis on empowerment, clarity, and assistance.</p>
+                            <p>Founded in 2019, Siksha Helpline is one of the most reputable educational consulting companies in India. Our goal is to provide clear, individualized guidance on the path to higher education. The Siksha Helpline offers professional advice and tools to assist you in understanding the complexity of the educational system, whether you're looking for aid with exam preparation, career counseling, school admissions, or academic planning. Our qualified experts give you individualized support, address your inquiries, and offer insightful advice to help you reach your learning objectives and make wise decisions. For everything related to education, the Siksha Helpline is your go-to source because of its emphasis on empowerment, clarity, and assistance.</p>
                             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos totam et in odit ipsum est tempora sint error temporibus blanditiis, reiciendis vel rerum distinctio aut necessitatibus enim numquam iure, omnis dolorum. Placeat, rem ullam doloremque cumque, error, alias quaerat sint deserunt cum voluptas incidunt amet veniam quasi accusantium sit?</p> */}
                         </div>
                         <div className="m_s_div mission">
@@ -120,7 +120,7 @@ const About = () => {
                     <div className="bg_reddish about_advertise py-5">
                         <div className="container">
                             <h3 data-aos="fade-up">Contact With Us</h3>
-                            <p data-aos="fade-up">"Ready to embark on your educational journey? Contact Siksha Helpline today for personalized admission guidance.
+                            <p data-aos="fade-up">"Ready to embark on your educational journey? Contact the Siksha Helpline today for personalized admission guidance.
 
                                 Enhance the webpage with visuals that highlight the journey from admission confusion to clarity and success."</p>
 

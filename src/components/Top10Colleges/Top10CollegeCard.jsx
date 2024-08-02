@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-
 const transformCollegeName = (name) => {
   const match = name.match(/^(.*?) - .*? - \[(.*?)\]$/);
   if (match) {
@@ -15,6 +14,7 @@ const Top10CollegeCard = (props) => {
   const transformedCollegeName = transformCollegeName(props.college_name);
   return (
     <div data-aos="fade-up" className="top10college_card">
+      <img src={props.imgSrc} alt="college-image" />
       <div data-aos="fade-up" className="ranking">
         <span>{props.ranking}</span>
       </div>
