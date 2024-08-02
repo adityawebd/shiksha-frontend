@@ -154,7 +154,7 @@
 }
 .top10college_card .card_body ul:last-child li:first-child {
     /* border: 1px solid red; */
-    height: 6vh;
+    height: 60px;
     padding-bottom: 6px;
 }
 
@@ -467,5 +467,9 @@
     line-height: 10px;
     font-size: 10px;
 }
+
+}
+
+@media (min-width:1024px) and (max-width: 1440px) {
 
 }

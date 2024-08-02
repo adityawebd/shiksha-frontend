@@ -158,7 +158,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/siksha-helpline" onClick={() => handleItemClick('item2')}
-                                        style={{ color: activeItem === 'item2' ? '#fff' : '', background: activeItem === 'item2' ? '#3D52A0' : '' }}>Siksha Help.</NavLink>
+                                        style={{ color: activeItem === 'item2' ? '#fff' : '', background: activeItem === 'item2' ? '#3D52A0' : '' }}>Siksha H.</NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/about-us" onClick={() => handleItemClick('item3')}

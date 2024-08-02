@@ -52,7 +52,7 @@ const StudyAbroadCard = (props) => {
                             <p className='check_colleges_p'><a href="">Check {props.check_no_of_colleges} Colleges <IoIosArrowForward /></a></p>
                         </div>
                     </div>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center responsive_back_coll">
                         <div className="colleges">
                             <span><PiStudentBold /></span>
                             <div className="no_of_colleges">{props.noofcoolleges} <br /> Colleges</div>

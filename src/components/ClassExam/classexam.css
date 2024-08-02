@@ -70,13 +70,19 @@
     transition: all 1s;
 }
 .classexam_widget p {
+    /* border: 1px solid red; */
     position: absolute;
     top: 6px;
     font-size: 12px;
     font-weight: 500;
     margin-left: 50px;
     font-weight: 700;
-    /* border: 1px solid red; */
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .classexam_widget:hover {
     cursor: pointer;
@@ -133,7 +139,7 @@
         font-size: 10px !important;
     }
     .classexam_widget:hover .classexam_widget_icon {
-        width: 130px;
+        width: 100%;
     }
     .classexam_widget:hover .classexam_widget_icon span:last-child {
         /* border: 1px solid red; */
@@ -171,7 +177,7 @@
         font-size: 10px !important;
     }
     .classexam_widget:hover .classexam_widget_icon {
-        width: 130px;
+        width: 100%;
     }
     .classexam_widget:hover .classexam_widget_icon span:last-child {
         /* border: 1px solid red; */
@@ -182,7 +188,6 @@
         margin-top: -5px;
     }
 } 
-
 
 @media (min-width: 481px) and (max-width: 768px) {
     .classexam {
@@ -255,7 +260,7 @@
         cursor: pointer;
     }
     .classexam_widget:hover .classexam_widget_icon {
-        width: 160px;
+        width: 100%;
         transition: all 1s;
         border-radius: 30px;
     }
@@ -281,18 +286,23 @@
     }
 }
 
-@media (min-width:769px) and (max-width: 1280px) {
-
+@media (min-width:769px) and (max-width: 1024px) {
     .classexam_widget p {
         /* border: 1px solid red; */
         font-size: 10px !important;
         margin-left: 46px;
         top:10px;
     }
-    
-
 }
-
-@media (min-width:1281px) and (max-width: 1920px) {
-  
+@media (min-width:1025px) and (max-width: 1440px) {
+    .classexam_wrapper {
+        margin-top: 50px;
+    }
+    .classexam_widget p {
+        /* border: 1px solid red; */
+        font-size: 12px !important;
+        margin-left: 46px;
+        top:10px;
+        padding-right: 6px;
+    }
 }
