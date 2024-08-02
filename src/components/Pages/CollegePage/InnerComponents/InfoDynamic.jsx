@@ -11,9 +11,9 @@ import AuthorIMG from '../../../../assets/images/college_imgs/college_logo.webp'
 
 const InfoDynamic = () => {
     const [showMore, setShowMore] = useState(true);
-    const [fixedData,setFixedDatas] = useState([]);
+    const [fixedData, setFixedDatas] = useState([]);
     const { collegeName } = useParams();
-
+    const today = new Date();
 
 
     const toggleReadMore = () => {
@@ -104,64 +104,64 @@ const InfoDynamic = () => {
     //     }
     // ]
 
-    const collegeHighlights = [
-        {
-            id: 1,
-            particular: "Established Year",
-            highlights: "1951"
-        },
-        {
-            id: 2,
-            particular: "Location",
-            highlights: "Kharagpur, West Bengal"
-        },
-        {
-            id: 3,
-            particular: "Campus Area",
-            highlights: "2100 Acres"
-        },
-        {
-            id: 4,
-            particular: "Institute Type",
-            highlights: "Public"
-        },
-        {
-            id: 5,
-            particular: "NIRF Ranking 2023",
-            highlights: "1951"
-        },
-        {
-            id: 6,
-            particular: "Top Courses",
-            highlights: "	B.Tech, M.Tech"
-        },
-        {
-            id: 7,
-            particular: "Students",
-            highlights: "16,590+"
-        },
-        {
-            id: 8,
-            particular: "Faculty",
-            highlights: "	760+"
-        },
-        {
-            id: 9,
-            particular: "Staff",
-            highlights: "	950+"
-        },
-        {
-            id: 10,
-            particular: "Official Website",
-            highlights: "https://www.iitkgp.ac"
-        },
-    ]
+    // const collegeHighlights = [
+    //     {
+    //         id: 1,
+    //         particular: "Established Year",
+    //         highlights: "1951"
+    //     },
+    //     {
+    //         id: 2,
+    //         particular: "Location",
+    //         highlights: "Kharagpur, West Bengal"
+    //     },
+    //     {
+    //         id: 3,
+    //         particular: "Campus Area",
+    //         highlights: "2100 Acres"
+    //     },
+    //     {
+    //         id: 4,
+    //         particular: "Institute Type",
+    //         highlights: "Public"
+    //     },
+    //     {
+    //         id: 5,
+    //         particular: "NIRF Ranking 2023",
+    //         highlights: "1951"
+    //     },
+    //     {
+    //         id: 6,
+    //         particular: "Top Courses",
+    //         highlights: "	B.Tech, M.Tech"
+    //     },
+    //     {
+    //         id: 7,
+    //         particular: "Students",
+    //         highlights: "16,590+"
+    //     },
+    //     {
+    //         id: 8,
+    //         particular: "Faculty",
+    //         highlights: "	760+"
+    //     },
+    //     {
+    //         id: 9,
+    //         particular: "Staff",
+    //         highlights: "	950+"
+    //     },
+    //     {
+    //         id: 10,
+    //         particular: "Official Website",
+    //         highlights: "https://www.iitkgp.ac"
+    //     },
+    // ]
 
     return (
         <div className="info_section">
             {/* 1st section */}
             {/* {fixedDatas.map((data,index)=>( */}
-                {/* <div>
+            {/* <div>
                 {fixedDatas[0]?.page_title}
 
                 </div> */}
@@ -173,15 +173,15 @@ const InfoDynamic = () => {
                     <h5> {fixedData[0]?.page_title} </h5>
                     <p> {fixedData[0]?.para_1} </p>
                     <p className="d-flex align-items-center">
-                        <span className="mr-5">Other major updates of IIT Kharagpur are as follows:</span>
+                        <span className="mr-5">Other major updates of {collegeName} are as follows:</span>
                         <button className="ml-5" onClick={toggleReadMore} id="myBtn"> {/* to toggle read more and less */}
                             {showMore ? "...Read more" : "Read less"}
                         </button>
                     </p>
                     <ul style={{ display: showMore ? "none" : "inline" }}>
                         {
-                            fixedData[0]?.major_upadtes?.map((list) => (
-                                <li key={list.id}> {list.list_item} </li>
+                            fixedData[0]?.major_updates?.map((list, index) => (
+                                <li key={index}> {list.list_item} </li>
                             ))
                         }
                     </ul>
@@ -209,7 +209,7 @@ const InfoDynamic = () => {
             {/* 2nd section */}
             <div className="about_college">
                 <div className="about_college_wrapper">
-                    <h5>About IIT Kharagpur</h5>
+                    <h5>About {collegeName}</h5>
                     <small>
                         <img src={fixedData[0]?.authorImgSrc} alt="author-image" />
                         Written By &nbsp; <b>{fixedData[0]?.author_name}  </b>
@@ -229,30 +229,48 @@ const InfoDynamic = () => {
                     <p> {fixedData[0]?.h5_para} </p>
 
                     <div className="table_wrapper" id='packagesList'>
-                            <table>          {/* Table styling is in table.css */}
-                                <thead>
-                                    <tr>
-                                        <th>Particluars  </th>
-                                        <th>IIT Kharagpur Highlights 2024 </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {
-                                        collegeHighlights.length > 0 ? (
-                                            collegeHighlights.map(collegeHighlights => (
-                                                <tr key={collegeHighlights.id}>
-                                                    <td className='courses_name'>{collegeHighlights.particular}</td>
-                                                    <td> {collegeHighlights.highlights || "N/A"}</td>
-                                                </tr>
-                                            ))
-                                        ) : (
-                                            <tr>
-                                                <td colSpan="4" style={{ textAlign: 'center' }}>Not Available</td>
+                        <table>          {/* Table styling is in table.css */}
+                            <thead>
+                                <tr>
+                                    <th>Particluars  </th>
+                                    <th>{collegeName} Highlights {today.getFullYear()} </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    fixedData[0]?.collegeHighlights.length > 0 ? (
+                                        fixedData[0]?.collegeHighlights.map(collegeHighlights => (
+                                            <tr key={collegeHighlights.id}>
+                                                <td className='courses_name'>{collegeHighlights.particular}</td>
+                                                <td >
+                                                    {collegeHighlights.highlights ? (
+                                                        collegeHighlights.highlights.startsWith('http') ? (
+                                                            <a
+                                                                href={collegeHighlights.highlights}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className='text-black'
+                                                                
+                                                            >
+                                                                {collegeHighlights.highlights}
+                                                            </a>
+                                                        ) : (
+                                                            collegeHighlights.highlights
+                                                        )
+                                                    ) : (
+                                                        "N/A"
+                                                    )}
+                                                </td>
                                             </tr>
-                                        )
-                                    }
-                                </tbody>
-                            </table>
+                                        ))
+                                    ) : (
+                                        <tr>
+                                            <td colSpan="4" style={{ textAlign: 'center' }}>Not Available</td>
+                                        </tr>
+                                    )
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
