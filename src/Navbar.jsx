@@ -172,11 +172,11 @@ const Navbar = () => {
                                     <NavLink className="nav-link" onClick={() => handleItemClick('item5')}
                                         style={{ color: activeItem === 'item5' ? '#fff' : '', background: activeItem === 'item5' ? '#3D52A0' : '' }}>Colleges</NavLink>
                                     <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                                        <li className="dropdown_item-1"><a href="http://localhost:3000/collegepage/IIT Delhi (IIT-D)">IIT Delhi</a></li>
-                                        <li className="dropdown_item-2"><a href="http://localhost:3000/collegepage/IIT Kharagpur (IIT-KGP)">IIT Kharagpur</a></li>
-                                        <li className="dropdown_item-3"><a href="http://localhost:3000/collegepage/IIT Madras (IIT-M)">IIT Madras</a></li>
-                                        <li className="dropdown_item-4"><a href="http://localhost:3000/collegepage/IIT Roorkee (IIT-R)">IIT Roorkee</a></li>
-                                        <li className="dropdown_item-5"><a href="http://localhost:3000/collegepage/IIT Bombay (IIT-B)">IIT Bombay</a></li>
+                                        <li className="dropdown_item-1"><a href="/collegepage/IIT Delhi (IIT-D)">IIT Delhi</a></li>
+                                        <li className="dropdown_item-2"><a href="/collegepage/IIT Kharagpur (IIT-KGP)">IIT Kharagpur</a></li>
+                                        <li className="dropdown_item-3"><a href="/collegepage/IIT Madras (IIT-M)">IIT Madras</a></li>
+                                        <li className="dropdown_item-4"><a href="/collegepage/IIT Roorkee (IIT-R)">IIT Roorkee</a></li>
+                                        <li className="dropdown_item-5"><a href="/collegepage/IIT Bombay (IIT-B)">IIT Bombay</a></li>
                                     </ul>
                                 </li>
                             </ul>

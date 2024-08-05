@@ -25,10 +25,10 @@ const Footer = () => {
                             <div className="col-md-6 col-sm-6 col-6">
                                 <h6>Top Colleges</h6>
                                 <ul>
-                                    <li><a href="http://localhost:3000/collegepage/IIT Madras (IIT-M)">IIT Madras</a></li>
-                                    <li><a href="http://localhost:3000/collegepage/IIT Kharagpur (IIT-KGP)">IIT Kharagpur</a></li>
-                                    <li><a href="http://localhost:3000/collegepage/IIT Roorkee (IIT-R)">IIT Roorkee</a></li>
-                                    <li><a href="http://localhost:3000/collegepage/IIT Bombay (IIT-B)">IIT Bombay</a></li>
+                                    <li><a href="/collegepage/IIT Madras (IIT-M)">IIT Madras</a></li>
+                                    <li><a href="/collegepage/IIT Kharagpur (IIT-KGP)">IIT Kharagpur</a></li>
+                                    <li><a href="/collegepage/IIT Roorkee (IIT-R)">IIT Roorkee</a></li>
+                                    <li><a href="/collegepage/IIT Bombay (IIT-B)">IIT Bombay</a></li>
                                 </ul>
                             </div>
                         </div>
