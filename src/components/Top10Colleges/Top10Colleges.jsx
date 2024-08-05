@@ -42,11 +42,12 @@ const collegeImages = {
 
 
 const Top10Colleges = () => {
-    const [tabData, setTabData] = useState([])
+    const [tabData, setTabData] = useState([]) 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://157.173.221.48:5000/api/top10colleges`)
+                const srver = process.env.REACT_APP_SERVER;
+                const response = await axios.get(`${srver}:5000/api/top10colleges`)
                 setTabData(response.data)
                 console.log(response.data);
             }
