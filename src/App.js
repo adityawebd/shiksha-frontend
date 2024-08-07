@@ -25,20 +25,11 @@ import PrivacyPolicy from './components/Pages/PrivacyPolicy';
 import Qna from './components/Pages/Q&A/Qna';
 import Error from './components/Error/Error';
 import DistanceEducation from './components/Pages/DistannceEducation/DistanceEducation';
+import Notifications from './components/Notifications/Notifications';
 
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <SetYourGoal />
-      <TopCollection />
-      <CollegeRecommendations />
-      <Top10Colleges />
-      <ExploreStudy />
-      <ClassExam />
-      <TopExams />
-      <LatestNews />
-      <StudyAbroad />
-      <Testimonials /> */}
       <Routes>
         <Route path='/' element={<HeroSection />} />
         <Route path='/about-us' element={<About />} />
@@ -48,6 +39,7 @@ const App = () => {
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/collegepage/:collegeName/qna' element={<Qna />} />
         <Route path='/collegepage/:collegeName/distance-education' element={<DistanceEducation />} />
+        <Route path='/notifications/:notificationName' element={<Notifications />} />
 
         <Route path='*' element={<Error />} />
       </Routes>

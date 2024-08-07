@@ -16,6 +16,8 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { FaGraduationCap } from "react-icons/fa6";
 import Modal from 'react-modal';
 
+import { useNavigate } from 'react-router-dom';
+
 
 const customStyles = {
     content: {
@@ -38,13 +40,15 @@ const Navbar = () => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [notificationType, setNotificationType] = useState('normal'); // State for dropdown selection
     // const [notifications, setNotifications] = useState([]); // State to store notifications
+    const navigate = useNavigate();
+
     const [notifications, setNotifications] = useState([  // demo data for notifications
         {
             id: 1,
             type: 'normal',
             image: 'path/to/image1.jpg',
             title: 'Notification 1',
-            message: 'This is the first notification message.',
+            message: 'This is the first notification message. This is the first notification message. This is the first notification message.This is the first notification message.',
             date: '2023-07-24',
             link: '#'
         },
@@ -74,8 +78,13 @@ const Navbar = () => {
             message: 'This is the second live notification message.',
             date: '2023-07-25',
             link: '#'
-        }
+        },
     ]);
+
+    const handleReadMore = (notificationName) => {
+        navigate(`/notifications/${notificationName}`);
+        closeModal();
+    };
 
 
 
@@ -188,7 +197,7 @@ const Navbar = () => {
                         <a href="https://www.facebook.com/profile.php?id=61550767657757&mibextid=LQQJ4d" target='_blank'><FaFacebookF /></a>
                     </div>
                     <div className="icon_div">
-                        <a href="https://www.linkedin.com/company/siksha-helpline/" target='_blank'><FaLinkedinIn /></a> 
+                        <a href="https://www.linkedin.com/company/siksha-helpline/" target='_blank'><FaLinkedinIn /></a>
                     </div>
                     <div className="icon_div">
                         <a href="https://www.instagram.com/siksha_helpline?igsh=MWU3ZXIwbXZzOXhndg==" target='_blank'><FaInstagram /></a>
@@ -231,7 +240,7 @@ const Navbar = () => {
                                                 <p className='nav_notification_para'>{notification.message}</p>
                                                 <div className="d-flex justify-content-between">
                                                     <div className='nav_noti_date'>{notification.date}</div>
-                                                    <a href={notification.link} className='nav_noti_readMore'>Read More</a>
+                                                    <button className='nav_noti_readMore' onClick={() => handleReadMore(notification.title)}>Read More</button>
                                                 </div>
                                             </div>
                                         ))}
