@@ -37,7 +37,8 @@ const AdmissionDynamic = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://157.173.221.48:5000/api/admissions`)
+                const srver = process.env.REACT_APP_SERVER;
+                 const response = await axios.get(`${srver}:5000/api/admissions`)
                 setData(response.data)
 
             }
